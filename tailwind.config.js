@@ -3,6 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        green: {
+          200: "#E6FFF4",
+          600: "#066038",
+        },
+        gray: {
+          200: "#EDEDED",
+          600: "#C3C3C3",
+        },
+        red: {
+          200: "#FFE6E6",
+          600: "#FF1515",
+        },
+      },
       fontSize: {
         "h1-xl": [
           "4rem",
