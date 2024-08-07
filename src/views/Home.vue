@@ -9,6 +9,10 @@ import Headline4 from "../components/text/Headline4.vue";
 import Paragraph1 from "../components/text/Paragraph1.vue";
 import Paragraph2 from "../components/text/Paragraph2.vue";
 import Paragraph3 from "../components/text/Paragraph3.vue";
+
+import Review from "../components/landing/Review.vue";
+import ListAdvantage from "../components/landing/ListAdvantage.vue";
+import FormBottom from "../components/landing/FormBottom.vue";
 </script>
 
 <template>
@@ -17,13 +21,19 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
     <Container class="border-b-[1px] border-green-600 py-14">
       <div class="flex flex-row items-center justify-between mx-2">
         <div class="basis-5/12 px-2">
-          <Headline1 class="mb-8">
-            Preparation of the annual tax reporting
-          </Headline1>
-          <Headline4 class="mb-12">
-            Tax reporting is easy with Polyus Consulting!</Headline4
-          >
-          <BigButton>Apply now</BigButton>
+          <h1 class="mb-8">
+            <Headline1>
+              {{ $t("landing.block_1.h1") }}
+            </Headline1>
+          </h1>
+          <p class="mb-12">
+            <Headline4>
+              {{ $t("landing.block_1.p") }}
+            </Headline4>
+          </p>
+          <BigButton>
+            {{ $t("landing.buttons.apply_now") }}
+          </BigButton>
         </div>
         <div class="basis-6/12 px-2">
           <img
@@ -41,11 +51,13 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
     <Container>
       <div class="flex flex-row justify-between">
         <div class="basis-5/12">
-          <Headline2>IMPORTANT!</Headline2>
+          <h2>
+            <Headline2>
+              {{ $t("landing.block_2.h2") }}
+            </Headline2>
+          </h2>
           <Paragraph1>
-            There are requirements for all US companies to file annual tax
-            returns with the federal IRS and the state, whether the business was
-            operating or not.
+            {{ $t("landing.block_2.p") }}
           </Paragraph1>
           <img
             src="/public/img/important_img.svg"
@@ -55,7 +67,11 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
         </div>
         <div class="basis-6/12">
           <div class="border-b-[1px] border-green-600 pb-12 mb-12">
-            <Headline3>US corporate reporting calendar</Headline3>
+            <h3>
+              <Headline3>
+                {{ $t("landing.block_2.h3") }}
+              </Headline3>
+            </h3>
           </div>
           <!-- Плитка - Большая -->
           <div
@@ -104,9 +120,9 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
               class="basis-1/2 border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px]"
             >
               <div class="bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                <Headline4 class="text-green-600"
-                  >Single-Member LLC <br />(LLC - one member)</Headline4
-                >
+                <Headline4 class="text-green-600">
+                  Single-Member LLC <br />(LLC - one member)
+                </Headline4>
               </div>
               <div class="flex justify-between p-6">
                 <Paragraph2>Form 1040</Paragraph2>
@@ -123,12 +139,6 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
           </div>
         </div>
       </div>
-    </Container>
-  </BlockSection>
-
-  <!-- Block - 3 - Penalties -->
-  <BlockSection>
-    <Container>
       <Headline2>
         <div class="flex flex-row flex-wrap">
           <div class="basis-full flex flex-row">
@@ -186,9 +196,9 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
                 class="basis-1/2 border-[1px] border-red-600 rounded-ss-[50px] rounded-ee-[50px]"
               >
                 <div class="bg-red-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                  <Headline4 class="text-green-600"
-                    >Single-Member LLC <br />(LLC - one member)</Headline4
-                  >
+                  <Headline4 class="text-green-600">
+                    Single-Member LLC <br />(LLC - one member)
+                  </Headline4>
                 </div>
                 <div class="flex justify-between p-6">
                   <Paragraph2>Form 1040</Paragraph2>
@@ -225,67 +235,51 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
     </Container>
   </BlockSection>
 
-  <!-- Block - 4 - POLYUS CONSULTING ADVANTAGES -->
+  <!-- Block - 3 - POLYUS CONSULTING ADVANTAGES -->
   <BlockSection>
     <Container>
       <div
         class="flex flex-row justify-around border-[1px] border-green-600 py-20 rounded-[50px]"
       >
         <div class="basis-4/12">
-          <Headline2>POLYUS CONSULTING ADVANTAGES</Headline2>
+          <h2>
+            <Headline2>
+              {{ $t("landing.block_3.h2") }}
+            </Headline2>
+          </h2>
           <img src="/public/img/advantages.webp" alt="" />
         </div>
         <div class="basis-5/12">
-          <div class="border-b-[1px] border-green-600">
-            <Headline3 class="text-green-600">
-              Impeccable track record
-            </Headline3>
-            <Paragraph2>
-              Polyus Consulting is a team of qualified specialists with
-              extensive experience in taxation, ensuring that your reports
-              comply with the current legal requirements.
-            </Paragraph2>
-          </div>
-          <div class="border-b-[1px] border-green-600">
-            <Headline3 class="text-green-600">
-              Reduction of tax audit risks
-            </Headline3>
-            <Paragraph2>
-              Correct preparation of reports and minimization of errors reduce
-              the probability of receiving tax notifications and audits. Our
-              specialists thoroughly check all documents before they are
-              submitted.
-            </Paragraph2>
-          </div>
-          <div class="border-b-[1px] border-green-600">
-            <Headline3 class="text-green-600">
-              Reduction of tax audit risks
-            </Headline3>
-            <Paragraph2>
-              Preparing tax reports requires considerable time and effort. By
-              turning to professionals, you free up your resources for more
-              important business tasks, allowing you to focus on the development
-              and growth of your company.
-            </Paragraph2>
-          </div>
-          <BigButton>Apply now</BigButton>
+          <ListAdvantage
+            v-for="(list, index) in ListAdvantages"
+            :key="index"
+            :Headline="list.Headline"
+            :Text="list.Text"
+          />
+          <BigButton>
+            {{ $t("landing.buttons.apply_now") }}
+          </BigButton>
         </div>
       </div>
     </Container>
   </BlockSection>
 
-  <!-- Block - 5 - PROCESS -->
+  <!-- Block - 4 - PROCESS -->
   <BlockSection>
     <Container>
       <div class="flex flex-row">
         <div class="basis-4/12">
-          <Headline2>PROCESS</Headline2>
+          <h2>
+            <Headline2>
+              {{ $t("landing.block_4.h2") }}
+            </Headline2>
+          </h2>
           <Paragraph2>
-            Polyus Consulting provides you with support at all stages of the tax
-            process - from gathering and analysis of documents to filing annual
-            reports and possible audit by the IRS.
+            {{ $t("landing.block_4.p") }}
           </Paragraph2>
-          <BigButton>Apply now</BigButton>
+          <BigButton>
+            {{ $t("landing.buttons.apply_now") }}
+          </BigButton>
         </div>
         <div class="basis-8/12">
           <img src="/public/img/process_img.svg" alt="" />
@@ -294,90 +288,30 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
     </Container>
   </BlockSection>
 
-  <!-- Block - 6 - REVIEWS -->
+  <!-- Block - 5 - REVIEWS -->
   <BlockSection>
     <Container>
       <div class="flex flex-row flex-wrap mx-2">
         <div class="basis-full px-2 mb-[60px]">
-          <Headline2>REVIEWS</Headline2>
+          <h2>
+            <Headline2>
+              {{ $t("landing.block_5.h2") }}
+            </Headline2>
+          </h2>
         </div>
-        <!-- Article - 1 -->
-        <div class="basis-4/12 px-2">
-          <div class="p-8 border-[1px] rounded-[30px]">
-            <div class="flex mb-6">
-              <img src="/public/img/rewie_aidar.svg" alt="" class="w16 h-16" />
-              <div class="ms-8">
-                <Headline3 class="mb-4">Aidar Madaminov</Headline3>
-                <img
-                  src="/public/img/icons/stars.svg"
-                  alt=""
-                  class="w-[132px] h-auto"
-                />
-              </div>
-            </div>
-            <Paragraph2 class="mb-8">
-              As a business owner in Florida, I used the services of Polyus
-              Consulting to prepare my tax report and saved a lot of time and
-              nerves. Everything was prepared without errors and turned in on
-              time. I recommend!
-            </Paragraph2>
-            <Paragraph3> 08.14.2023 </Paragraph3>
-          </div>
-        </div>
-        <!-- Article - 2 -->
-        <div class="basis-4/12 px-2">
-          <div class="p-8 border-[1px] rounded-[30px]">
-            <div class="flex mb-6">
-              <img
-                src="/public/img/rewie_svetlana.svg"
-                alt=""
-                class="w16 h-16"
-              />
-              <div class="ms-8">
-                <Headline3 class="mb-4">Svetlana Romanova</Headline3>
-                <img
-                  src="/public/img/icons/stars.svg"
-                  alt=""
-                  class="w-[132px] h-auto"
-                />
-              </div>
-            </div>
-            <Paragraph2 class="mb-8">
-              I was looking for help with my annual US tax report and turned to
-              Polyus Consulting. Lolita and her team are high level
-              professionals. Now I am their regular client.
-            </Paragraph2>
-            <Paragraph3>03.27.2024</Paragraph3>
-          </div>
-        </div>
-        <!-- Article - 3 -->
-        <div class="basis-4/12 px-2">
-          <div class="p-8 border-[1px] rounded-[30px]">
-            <div class="flex mb-6">
-              <img src="/public/img/rewie_aidar.svg" alt="" class="w16 h-16" />
-              <div class="ms-8">
-                <Headline3 class="mb-4">Edgar Lawrence</Headline3>
-                <img
-                  src="/public/img/icons/stars.svg"
-                  alt=""
-                  class="w-[132px] h-auto"
-                />
-              </div>
-            </div>
-            <Paragraph2 class="mb-8">
-              This is not the first time I have contacted Polyus Consulting and
-              I appreciate their responsible attitude to work. They provide
-              excellent service and optimal solutions for tax reporting. I feel
-              confident with them!
-            </Paragraph2>
-            <Paragraph3>07.27.2024</Paragraph3>
-          </div>
-        </div>
+        <Review
+          v-for="(review, index) in Reviews"
+          :key="index"
+          :ImageReview="review.ImageReview"
+          :NameReview="review.NameReview"
+          :TextReview="review.TextReview"
+          :TimeReview="review.TimeReview"
+        />
       </div>
     </Container>
   </BlockSection>
 
-  <!-- Block - 7 -->
+  <!-- Block - 6 -->
   <BlockSection>
     <Container>
       <div class="flex flex-row flex-wrap items-center justify-between">
@@ -394,12 +328,15 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
             class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] mb-12"
           >
             <div class="bg-green-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-              <Headline1>PRICE</Headline1>
+              <h2>
+                <Headline1>
+                  {{ $t("landing.block_6.h2") }}
+                </Headline1>
+              </h2>
             </div>
             <div class="m-8 border-t-[1px] border-green-600 pt-8">
               <Paragraph2>
-                Preparation of annual tax reports with Polyus Consulting - for
-                those who value their time!
+                {{ $t("landing.block_6.p") }}
               </Paragraph2>
               <br />
               <img
@@ -414,50 +351,62 @@ import Paragraph3 from "../components/text/Paragraph3.vue";
     </Container>
   </BlockSection>
 
-  <!-- Block - 8 -->
+  <!-- Block - 7 -->
   <BlockSection>
     <Container>
       <div class="flex flex-row flex-wrap mx-2 items-end">
         <div class="basis-full mb-14 px-2">
-          <Headline2>CONTACT US</Headline2>
+          <h2>
+            <Headline2>
+              {{ $t("landing.block_7.h2") }}
+            </Headline2>
+          </h2>
         </div>
-        <div class="basis-4/12 px-2">
-          <Paragraph2>
-            <input
-              type="text"
-              class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-              placeholder="Name*"
-            />
-          </Paragraph2>
-          <Paragraph2>
-            <input
-              type="text"
-              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
-              placeholder="Name*"
-            />
-          </Paragraph2>
-        </div>
-        <div class="basis-4/12 px-2">
-          <Paragraph2>
-            <input
-              type="text"
-              class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-              placeholder="Name*"
-            />
-          </Paragraph2>
-
-          <Paragraph2>
-            <input
-              type="text"
-              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
-              placeholder="Name*"
-            />
-          </Paragraph2>
-        </div>
-        <div class="basis-2/12">
-          <BigButton>Submit</BigButton>
-        </div>
+        <FormBottom />
       </div>
     </Container>
   </BlockSection>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      Reviews: [
+        {
+          ImageReview: "/public/img/rewie_aidar.svg",
+          NameReview: this.$t("landing.block_5.rewiew_1.name"),
+          TextReview: this.$t("landing.block_5.rewiew_1.text"),
+          TimeReview: "08.14.2023",
+        },
+        {
+          ImageReview: "/public/img/rewie_svetlana.svg",
+          NameReview: this.$t("landing.block_5.rewiew_2.name"),
+          TextReview: this.$t("landing.block_5.rewiew_2.text"),
+          TimeReview: "03.27.2024",
+        },
+        {
+          ImageReview: "/public/img/rewie_aidar.svg",
+          NameReview: this.$t("landing.block_5.rewiew_3.name"),
+          TextReview: this.$t("landing.block_5.rewiew_3.text"),
+          TimeReview: "07.27.2024",
+        },
+      ],
+      ListAdvantages: [
+        {
+          Headline: this.$t("landing.block_3.h3_1"),
+          Text: this.$t("landing.block_3.p_1"),
+        },
+        {
+          Headline: this.$t("landing.block_3.h3_2"),
+          Text: this.$t("landing.block_3.p_2"),
+        },
+        {
+          Headline: this.$t("landing.block_3.h3_2"),
+          Text: this.$t("landing.block_3.p_2"),
+        },
+      ],
+    };
+  },
+};
+</script>
