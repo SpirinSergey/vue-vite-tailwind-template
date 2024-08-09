@@ -69,7 +69,7 @@ import FormBottom from "../components/landing/FormBottom.vue";
           <div class="border-b-[1px] border-green-600 pb-12 mb-12">
             <h3>
               <Headline3>
-                {{ $t("landing.block_2.h3") }}
+                {{ $t("landing.block_2.h3_1") }}
               </Headline3>
             </h3>
           </div>
@@ -78,19 +78,27 @@ import FormBottom from "../components/landing/FormBottom.vue";
             class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] mb-12"
           >
             <div class="bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-              <Headline4 class="text-green-600"
-                >Partnerships LLC (Two or more participants)</Headline4
-              >
+              <h4>
+                <Headline4 class="text-green-600">
+                  {{ $t("landing.block_2.green_table_1.h4") }}
+                </Headline4>
+              </h4>
             </div>
             <div class="flex justify-between p-6">
-              <Paragraph2>Form 1065</Paragraph2>
+              <Paragraph2>
+                {{ $t("landing.block_2.green_table_1.p_1") }}
+              </Paragraph2>
               <img src="/public/img/icons/calendar.svg" alt="" />
             </div>
             <div class="flex justify-between pe-6">
               <img src="/public/img/icons/lines.svg" alt="" />
               <div class="flex flex-row items-center">
-                <Headline3> March </Headline3>
-                <Headline2> 15 </Headline2>
+                <Headline3>
+                  {{ $t("landing.block_2.green_table_1.p_2") }}
+                </Headline3>
+                <Headline2>
+                  {{ $t("landing.block_2.green_table_1.p_3") }}
+                </Headline2>
               </div>
             </div>
           </div>
@@ -100,17 +108,25 @@ import FormBottom from "../components/landing/FormBottom.vue";
               class="basis-1/2 border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px]"
             >
               <div class="bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                <Headline4 class="text-green-600">С Corporation</Headline4>
+                <Headline4 class="text-green-600">
+                  {{ $t("landing.block_2.green_table_2.h4") }}
+                </Headline4>
               </div>
               <div class="flex justify-between p-6">
-                <Paragraph2>Form 1120</Paragraph2>
+                <Paragraph2>
+                  {{ $t("landing.block_2.green_table_2.p_1") }}
+                </Paragraph2>
                 <img src="/public/img/icons/calendar.svg" alt="" />
               </div>
               <div class="flex justify-between pe-6">
                 <img src="/public/img/icons/vertical_lines.svg" alt="" />
                 <div class="flex flex-row items-center">
-                  <Headline3>April</Headline3>
-                  <Headline2> 15 </Headline2>
+                  <Headline3>
+                    {{ $t("landing.block_2.green_table_2.p_2") }}
+                  </Headline3>
+                  <Headline2>
+                    {{ $t("landing.block_2.green_table_2.p_3") }}
+                  </Headline2>
                 </div>
               </div>
             </div>
@@ -121,18 +137,24 @@ import FormBottom from "../components/landing/FormBottom.vue";
             >
               <div class="bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
                 <Headline4 class="text-green-600">
-                  Single-Member LLC <br />(LLC - one member)
+                  {{ $t("landing.block_2.green_table_3.h4") }}
                 </Headline4>
               </div>
               <div class="flex justify-between p-6">
-                <Paragraph2>Form 1040</Paragraph2>
+                <Paragraph2>
+                  {{ $t("landing.block_2.green_table_3.p_1") }}
+                </Paragraph2>
                 <img src="/public/img/icons/calendar.svg" alt="" />
               </div>
               <div class="flex justify-between pe-6">
                 <img src="/public/img/icons/vertical_lines.svg" alt="" />
                 <div class="flex flex-row items-center">
-                  <Headline3>April</Headline3>
-                  <Headline2> 15 </Headline2>
+                  <Headline3>
+                    {{ $t("landing.block_2.green_table_3.p_2") }}
+                  </Headline3>
+                  <Headline2>
+                    {{ $t("landing.block_2.green_table_3.p_3") }}
+                  </Headline2>
                 </div>
               </div>
             </div>
@@ -144,7 +166,11 @@ import FormBottom from "../components/landing/FormBottom.vue";
           <div class="basis-full flex flex-row">
             <div class="basis-6/12">
               <div class="border-b-[1px] border-red-600 pb-12">
-                <Headline3>Penalties</Headline3>
+                <h3>
+                  <Headline3>
+                    {{ $t("landing.block_2.h3_2") }}
+                  </Headline3>
+                </h3>
               </div>
             </div>
           </div>
@@ -154,19 +180,25 @@ import FormBottom from "../components/landing/FormBottom.vue";
               class="border-[1px] border-red-600 rounded-ss-[50px] rounded-ee-[50px] my-12"
             >
               <div class="bg-red-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                <Headline4 class="text-green-600"
-                  >Partnerships LLC (Two or more participants)</Headline4
-                >
+                <Paragraph2>
+                  {{ $t("landing.block_2.red_table_1.h4") }}
+                </Paragraph2>
               </div>
               <div class="flex justify-between p-6">
-                <Paragraph2>Form 1065</Paragraph2>
+                <Paragraph2>
+                  {{ $t("landing.block_2.red_table_1.p_1") }}
+                </Paragraph2>
                 <img src="/public/img/icons/calendar.svg" alt="" />
               </div>
               <div class="flex justify-between pe-6">
                 <img src="/public/img/icons/lines.svg" alt="" />
                 <div class="flex flex-row items-center">
-                  <Headline3> March </Headline3>
-                  <Headline2> 15 </Headline2>
+                  <Headline3> 
+                  {{ $t("landing.block_2.red_table_1.p_2") }}  
+                  </Headline3>
+                  <Headline2> 
+                  {{ $t("landing.block_2.red_table_1.p_3") }}  
+                  </Headline2>
                 </div>
               </div>
             </div>
@@ -176,17 +208,25 @@ import FormBottom from "../components/landing/FormBottom.vue";
                 class="basis-1/2 border-[1px] border-red-600 rounded-ss-[50px] rounded-ee-[50px]"
               >
                 <div class="bg-red-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                  <Headline4 class="text-green-600">С Corporation</Headline4>
+                  <Paragraph2>
+                    {{ $t("landing.block_2.red_table_2.h4") }}
+                  </Paragraph2>
                 </div>
                 <div class="flex justify-between p-6">
-                  <Paragraph2>Form 1120</Paragraph2>
+                  <Paragraph2>
+                    {{ $t("landing.block_2.red_table_2.p_1") }}
+                  </Paragraph2>
                   <img src="/public/img/icons/calendar.svg" alt="" />
                 </div>
                 <div class="flex justify-between pe-6">
                   <img src="/public/img/icons/vertical_lines.svg" alt="" />
                   <div class="flex flex-row items-center">
-                    <Headline3>April</Headline3>
-                    <Headline2> 15 </Headline2>
+                    <Headline3>
+                      {{ $t("landing.block_2.red_table_2.p_2") }}
+                    </Headline3>
+                    <Headline2> 
+                    {{ $t("landing.block_2.red_table_2.p_3") }}  
+                    </Headline2>
                   </div>
                 </div>
               </div>
@@ -196,19 +236,25 @@ import FormBottom from "../components/landing/FormBottom.vue";
                 class="basis-1/2 border-[1px] border-red-600 rounded-ss-[50px] rounded-ee-[50px]"
               >
                 <div class="bg-red-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-                  <Headline4 class="text-green-600">
-                    Single-Member LLC <br />(LLC - one member)
-                  </Headline4>
+                  <Paragraph2>
+                    {{ $t("landing.block_2.red_table_3.h4") }}
+                  </Paragraph2>
                 </div>
                 <div class="flex justify-between p-6">
-                  <Paragraph2>Form 1040</Paragraph2>
+                  <Paragraph2>
+                     {{ $t("landing.block_2.red_table_3.p_1") }}
+                  </Paragraph2>
                   <img src="/public/img/icons/calendar.svg" alt="" />
                 </div>
                 <div class="flex justify-between pe-6">
                   <img src="/public/img/icons/vertical_lines.svg" alt="" />
                   <div class="flex flex-row items-center">
-                    <Headline3>April</Headline3>
-                    <Headline2> 15 </Headline2>
+                    <Headline3>
+                      {{ $t("landing.block_2.red_table_3.p_2") }}
+                    </Headline3>
+                    <Headline2> 
+                    {{ $t("landing.block_2.red_table_3.p_3") }}  
+                    </Headline2>
                   </div>
                 </div>
               </div>
@@ -218,10 +264,7 @@ import FormBottom from "../components/landing/FormBottom.vue";
             <div class="flex">
               <img src="/public/img/icons/!.svg" alt="" class="pe-8" />
               <Paragraph2>
-                If you have not filed/verified your annual returns in time, the
-                IRS grants a 6-month grace period with no penalties or fees. To
-                receive the extension, you must file the correct information
-                with the IRS.
+                {{ $t("landing.block_2.p_b") }}
               </Paragraph2>
             </div>
             <img

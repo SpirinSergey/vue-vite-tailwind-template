@@ -38,6 +38,8 @@ import Paragraph2 from "../text/Paragraph2.vue";
     </Paragraph2>
   </div>
   <div class="basis-2/12">
-    <BigButton>Submit</BigButton>
+    <BigButton>
+        {{ $t("landing.buttons.submit") }}
+    </BigButton>
   </div>
 </template>
