@@ -8,9 +8,36 @@ export default {
       about_us: "About us",
       contact_us: "Contact us",
     },
+    footer: {
+      terms: "Terms of Us",
+      privacy: "Privacy policy",
+      working_ours: "Working ours",
+      monday: "Monday",
+      tuesday: "Tuesday",
+      wednesday: "Wednesday",
+      thursday: "Thursday",
+      friday: "Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+      time_1: "9AM–5PM",
+      time_2: "Closed",
+      tel: "+1 305-804-6752",
+      mail: "info@polyusconsulting.com",
+      adress: "1895 Tyler St, STE 404, Hollywood, FL 33020, US",
+    },
     buttons: {
       apply_now: "Apply now",
       submit: "Submit",
+    },
+    forms: {
+      name: "Name*",
+      email: "Email*",
+      message: "Message",
+    },
+    cookie: {
+      title: "Notice.",
+      description:
+        "TermsFeed uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our",
     },
     block_1: {
       h1: "Preparation of the annual tax reporting",
@@ -89,6 +116,7 @@ export default {
     },
     block_6: {
       h2: "PRICE",
+      hp: "Starting from 700 $",
       p: "Preparation of annual tax reports with Polyus Consulting - for those who value their time!",
     },
     block_7: {

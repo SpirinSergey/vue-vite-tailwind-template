@@ -9,14 +9,14 @@ import Paragraph2 from "../text/Paragraph2.vue";
       <input
         type="text"
         class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-        placeholder="Name*"
+        :placeholder="$t('landing.forms.name')"
       />
     </Paragraph2>
     <Paragraph2>
       <input
         type="text"
         class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
-        placeholder="Name*"
+        :placeholder="$t('landing.forms.email')"
       />
     </Paragraph2>
   </div>
@@ -25,7 +25,7 @@ import Paragraph2 from "../text/Paragraph2.vue";
       <input
         type="text"
         class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-        placeholder="Name*"
+        :placeholder="$t('landing.forms.email')"
       />
     </Paragraph2>
 
@@ -33,7 +33,7 @@ import Paragraph2 from "../text/Paragraph2.vue";
       <input
         type="text"
         class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
-        placeholder="Name*"
+        :placeholder="$t('landing.forms.message')"
       />
     </Paragraph2>
   </div>

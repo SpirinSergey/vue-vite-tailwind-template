@@ -8,14 +8,18 @@ import localesRu from "./locales/RU.js";
 
 import App from "./App.vue";
 
+import VueCookies from "vue-cookies";
+
 import { createWebHistory, createRouter } from "vue-router";
 
 import HomeView from "./views/Home.vue";
-import ContactView from "./views/Contact.vue";
+import PrivacyPolicy from "./views/legal/PrivacyPolicy.vue";
+import TermsOfUs from "./views/legal/TermsOfUs.vue";
 
 const routes = [
   { path: "/", component: HomeView },
-  { path: "/contact", component: ContactView },
+  { path: "/legal/privacy-policy", component: PrivacyPolicy },
+  { path: "/legal/terms-of-us", component: TermsOfUs },
 ];
 
 const router = createRouter({
@@ -44,4 +48,5 @@ const app = createApp(App);
 app.use(pinia);
 app.use(i18n);
 app.use(router);
+app.use(VueCookies);
 app.mount("#app");

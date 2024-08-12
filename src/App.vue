@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/layout/Header.vue";
 import Footer from "./components/layout/Footer.vue";
+import Cookies from "./components/shared/Cookies.vue";
 </script>
 
 <template>
@@ -13,4 +14,5 @@ import Footer from "./components/layout/Footer.vue";
   <footer>
     <Footer />
   </footer>
+<Cookies />
 </template>
