@@ -22,7 +22,6 @@ export default {
       time_1: "9AM–5PM",
       time_2: "Closed",
       tel: "+1 305-804-6752",
-      mail: "info@polyusconsulting.com",
       adress: "1895 Tyler St, STE 404, Hollywood, FL 33020, US",
     },
     buttons: {

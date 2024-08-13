@@ -16,7 +16,7 @@ import Paragraph2 from "../../text/Paragraph2.vue";
         </Paragraph2>
       </div>
       <div class="flex justify-between p-6">
-        <img src="/public/img/icons/vertical_lines.svg" alt="" />
+        <img src="/img/icons/vertical_lines.svg" alt="" />
         <div>
           <p>
             <Paragraph2>

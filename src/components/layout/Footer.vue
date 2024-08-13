@@ -3,6 +3,7 @@ import Container from "../shared/Container.vue";
 import BlockSection from "../shared/BlockSection.vue";
 import Headline3 from "../text/Headline3.vue";
 import Paragraph2 from "../text/Paragraph2.vue";
+import Link from "../text/Link.vue";
 import Small from "../buttons/Small.vue";
 </script>
 
@@ -13,7 +14,7 @@ import Small from "../buttons/Small.vue";
         class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 mx-2 justify-between"
       >
         <div class="basis-3/12 px-2">
-          <img src="/public/img/logo.webp" alt="" class="w-[293px] h-[104px]" />
+          <img src="/img/logo.webp" alt="" class="w-[293px] h-[104px]" />
         </div>
         <div class="basis-3/12">
           <h3 class="mb-12">
@@ -82,14 +83,14 @@ import Small from "../buttons/Small.vue";
           <div class="border-b-[1px] border-green-600 pb-4 mb-8">
             <div class="flex">
               <router-link to="/legal/terms-of-us" exact>
-                <Paragraph2 class="me-[176px]">
+                <Link class="me-[176px]">
                   {{ $t("landing.footer.terms") }}
-                </Paragraph2>
+                </Link>
               </router-link>
               <router-link to="/legal/privacy-policy" exact>
-                <Paragraph2>
+                <Link>
                   {{ $t("landing.footer.privacy") }}
-                </Paragraph2>
+                </Link>
               </router-link>
             </div>
           </div>
@@ -103,7 +104,7 @@ import Small from "../buttons/Small.vue";
           <div class="mb-6">
             <a href="mailto:info@polyusconsulting.com">
               <Paragraph2>
-                {{ $t("landing.footer.mail") }}
+                info@polyusconsulting.com
               </Paragraph2>
             </a>
           </div>

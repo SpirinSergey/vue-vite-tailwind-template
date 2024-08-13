@@ -12,12 +12,12 @@ import VueCookies from "vue-cookies";
 
 import { createWebHistory, createRouter } from "vue-router";
 
-import HomeView from "./views/Home.vue";
+import TaxReport from "./views/TaxReport.vue";
 import PrivacyPolicy from "./views/legal/PrivacyPolicy.vue";
 import TermsOfUs from "./views/legal/TermsOfUs.vue";
 
 const routes = [
-  { path: "/", component: HomeView },
+  { path: "/", component: TaxReport },
   { path: "/legal/privacy-policy", component: PrivacyPolicy },
   { path: "/legal/terms-of-us", component: TermsOfUs },
 ];

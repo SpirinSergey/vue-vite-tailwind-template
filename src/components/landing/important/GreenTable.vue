@@ -6,7 +6,7 @@ import Paragraph2 from "../../text/Paragraph2.vue";
 </script>
 
 <template>
-  <div class="basis-1/2 px-2">
+  <div class="2xl:basis-1/2 lg:basis-1/3 md:basis-1/2 basis-full px-2">
     <div
       class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px]"
     >
@@ -19,15 +19,23 @@ import Paragraph2 from "../../text/Paragraph2.vue";
         <Paragraph2>
           {{ From }}
         </Paragraph2>
-        <img src="/public/img/icons/calendar.svg" alt="" />
+        <img
+          src="/img/icons/calendar.svg"
+          alt=""
+          class="md:w-[26px] w-6 h-auto"
+        />
       </div>
       <div class="flex justify-between pe-6">
-        <img src="/public/img/icons/vertical_lines.svg" alt="" />
+        <img
+          src="/img/icons/vertical_lines.svg"
+          alt=""
+          class="xl:w-[138px] h-auto w-[101px]"
+        />
         <div class="flex flex-row items-center">
           <Headline3>
             {{ Month }}
           </Headline3>
-          <Headline2>
+          <Headline2 class="pb-3">
             {{ NumberTime }}
           </Headline2>
         </div>

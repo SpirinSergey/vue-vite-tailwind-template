@@ -2,6 +2,7 @@
 import Container from "../shared/Container.vue";
 import SelectLanguages from "../shared/SelectLanguages.vue";
 import Paragraph2 from "../text/Paragraph2.vue";
+import Link from "../text/Link.vue";
 </script>
 
 <template>
@@ -10,15 +11,15 @@ import Paragraph2 from "../text/Paragraph2.vue";
       <div class="flex flex-row items-center mx-2">
         <div class="basis-3/12 px-2">
           <RouterLink to="/">
-            <img src="/public/img/logo.webp" alt="" class="w-[150px] h-auto" />
+            <img src="/img/logo.webp" alt="" class="w-[150px] h-auto" />
           </RouterLink>
         </div>
         <div class="basis-7/12 px-2">
           <ul class="flex justify-between">
             <li>
-              <Paragraph2>
+              <Link>
                 {{ $t("landing.header.important") }}
-              </Paragraph2>
+              </Link>
             </li>
             <li>
               <Paragraph2>

@@ -16,7 +16,7 @@ import Paragraph3 from "../text/Paragraph3.vue";
             </Headline3>
           </h3>
           <img
-            src="/public/img/icons/stars.svg"
+            src="/img/icons/stars.svg"
             alt=""
             class="w-[132px] h-auto"
           />

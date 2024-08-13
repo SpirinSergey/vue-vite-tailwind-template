@@ -15,6 +15,7 @@ import ListAdvantage from "../components/landing/ListAdvantage.vue";
 import FormBottom from "../components/landing/FormBottom.vue";
 
 // important
+import GreenTableFull from "../components/landing/important/GreenTableFull.vue";
 import GreenTable from "../components/landing/important/GreenTable.vue";
 import RedTable from "../components/landing/important/RedTable.vue";
 </script>
@@ -22,19 +23,21 @@ import RedTable from "../components/landing/important/RedTable.vue";
 <template>
   <!-- Block - 1 - TOP -->
   <BlockSection>
-    <Container class="border-b-[1px] border-green-600 py-14">
+    <Container
+      class="border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16"
+    >
       <div
         class="flex flex-row flex-wrap items-center xl:justify-between justify-center mx-2"
       >
         <div
           class="basis-full sm:basis-10/12 xl:basis-5/12 px-2 xl:text-left text-center"
         >
-          <h1 class="mb-8">
+          <h1 class="mb-5 sm:mb-6 xl:mb-8">
             <Headline1>
               {{ $t("landing.block_1.h1") }}
             </Headline1>
           </h1>
-          <p class="mb-12">
+          <p class="mb-6 sm:mb-8 xl:mb-12">
             <Headline4>
               {{ $t("landing.block_1.p") }}
             </Headline4>
@@ -45,7 +48,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
         </div>
         <div class="basis-full sm:basis-10/12 xl:basis-6/12 px-2">
           <img
-            src="/public/img/preparation_tax_report.webp"
+            src="/img/preparation_tax_report.webp"
             alt="Preparation of the annual tax reporting"
             class="h-auto w-full"
           />
@@ -55,140 +58,187 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 2 - IMPORTANT -->
-  <Container>
-    <BlockSection>
-      <div class="flex flex-row justify-between">
-        <div class="basis-5/12 px-2">
-          <h2 class="mb-[60px]">
-            <Headline2>
-              {{ $t("landing.block_2.h2") }}
-            </Headline2>
-          </h2>
-          <Paragraph1 class="mb-[179px]">
-            {{ $t("landing.block_2.p") }}
-          </Paragraph1>
-          <img
-            src="/public/img/important_img.svg"
-            alt=""
-            class="w-[547px] h-auto"
-          />
+  <BlockSection>
+    <Container>
+      <div
+        class="flex flex-row flex-wrap justify-between 2xl:mb-[180px] xl:mb-[140px] md:mb-[100px] sm:md-[80px] mb-[60px]"
+      >
+        <div
+          class="2xl:basis-5/12 basis-full 2xl:mb-0 xl:mb-[72px] md:mb-12 sm:mb-10 mb-8"
+        >
+          <div
+            class="flex flex-row flex-wrap md:justify-between lg:items-start md:items-center justify-center"
+          >
+            <div
+              class="2xl:basis-full xl:basis-7/12 lg:basis-6/12 md:basis-7/12 basis-full px-2"
+            >
+              <div
+                class="flex items-start justify-between xl:mb-[60px] md:mb-12 sm:mb-10 mb-8"
+              >
+                <h2>
+                  <Headline2>
+                    {{ $t("landing.block_2.h2") }}
+                  </Headline2>
+                </h2>
+                <img
+                  src="/public/img/icons/double_arrow.svg"
+                  class="sm:h-9 sm:w-7 h-[21px] w-[16px]"
+                  alt=""
+                />
+              </div>
+              <Paragraph1 class="2xl:mb-[96px] md:mb-0 sm:mb-10 mb-8">
+                {{ $t("landing.block_2.p") }}
+              </Paragraph1>
+            </div>
+            <div
+              class="2xl:basis-full xl:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2"
+            >
+              <img src="/img/important_img.svg" alt="" class="w-full h-auto" />
+            </div>
+          </div>
         </div>
-        <div class="basis-6/12 px-2">
-          <div class="border-b-[1px] border-green-600 pb-12 mb-12">
+        <div class="2xl:basis-6/12 basis-full">
+          <div
+            class="border-b-[1px] border-green-600 xl:pb-12 xl:mb-12 sm:pb-8 sm:mb-8 pb-6 mb-6 mx-2"
+          >
             <h3>
               <Headline3>
                 {{ $t("landing.block_2.h3_1") }}
               </Headline3>
             </h3>
           </div>
-          <div
-            class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] mb-12"
-          >
-            <div class="bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-              <h4>
-                <Headline4 class="text-green-600">
-                  {{ $t("landing.block_2.green_table_1.h4") }}
-                </Headline4>
-              </h4>
-            </div>
-            <div class="flex justify-between p-6">
-              <Paragraph2>
-                {{ $t("landing.block_2.green_table_1.p_1") }}
-              </Paragraph2>
-              <img src="/public/img/icons/calendar.svg" alt="" />
-            </div>
-            <div class="flex justify-between pe-6">
-              <img src="/public/img/icons/lines.svg" alt="" />
-              <div class="flex flex-row items-center">
-                <Headline3>
-                  {{ $t("landing.block_2.green_table_1.p_2") }}
-                </Headline3>
-                <Headline2>
-                  {{ $t("landing.block_2.green_table_1.p_3") }}
-                </Headline2>
-              </div>
+          <GreenTableFull
+            class="2xl:block hidden"
+            :key="ImportantGreen[0].id"
+            :Headline="ImportantGreen[0].Headline"
+            :From="ImportantGreen[0].From"
+            :Month="ImportantGreen[0].Month"
+            :NumberTime="ImportantGreen[0].NumberTime"
+          />
+          <div class="md:block hidden">
+            <div class="flex flex-row flex-wrap">
+              <GreenTable
+                v-for="(important, index) in ImportantGreen"
+                :key="index"
+                :Headline="important.Headline"
+                :From="important.From"
+                :Month="important.Month"
+                :NumberTime="important.NumberTime"
+                :class="{
+                  '2xl:hidden': index === 0,
+                  'hidden lg:block': index === 1,
+                }"
+              />
             </div>
           </div>
-          <div class="flex flex-row">
-            <GreenTable
-              v-for="(important, index) in ImportantGreen"
-              :key="index"
-              :Headline="important.Headline"
-              :Pinalty="important.Pinalty"
-              :From="important.From"
-              :NumberTime="important.NumberTime"
-            />
-          </div>
-        </div>
-      </div>
-    </BlockSection>
-    <BlockSection>
-      <div class="flex flex-row flex-wrap justify-between">
-        <div class="basis-full flex flex-row">
-          <div class="basis-6/12">
-            <div class="border-b-[1px] border-red-600 pb-12">
-              <h3>
-                <Headline3>
-                  {{ $t("landing.block_2.h3_2") }}
-                </Headline3>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="basis-6/12">
-          <div
-            class="border-[1px] border-red-600 rounded-ss-[50px] rounded-ee-[50px] my-12"
-          >
-            <div class="bg-red-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-              <Paragraph2>
-                {{ $t("landing.block_2.red_table_1.h4") }}
-              </Paragraph2>
-            </div>
-            <div class="flex justify-between p-6">
-              <Paragraph2>
-                {{ $t("landing.block_2.red_table_1.p_1") }}
-              </Paragraph2>
-            </div>
-            <div class="flex justify-between pe-6">
-              <img src="/public/img/icons/lines.svg" alt="" />
-              <div class="flex flex-row items-center">
-                <Headline2>
-                  {{ $t("landing.block_2.red_table_1.p_2") }}
-                </Headline2>
-                <Headline3>
-                  {{ $t("landing.block_2.red_table_1.p_3") }}
-                </Headline3>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <RedTable
-              v-for="(important, index) in ImportantRed"
-              :key="index"
-              :Headline="important.Headline"
-              :Pinalty="important.Pinalty"
-              :From="important.From"
-              :Price="important.Price"
-            />
-          </div>
-        </div>
-        <div class="basis-5/12">
-          <div class="flex mb-12">
-            <img src="/public/img/icons/!.svg" alt="" class="pe-8" />
-            <Paragraph2>
-              {{ $t("landing.block_2.p_b") }}
-            </Paragraph2>
-          </div>
-          <img
-            src="/public/img/penalties_img.svg"
-            alt=""
-            class="w-[602] h-auto"
+          <GreenTableFull
+            class="lg:hidden md:block hidden"
+            :key="ImportantGreen[2].id"
+            :Headline="ImportantGreen[2].Headline"
+            :From="ImportantGreen[2].From"
+            :Month="ImportantGreen[2].Month"
+            :NumberTime="ImportantGreen[2].NumberTime"
+          />
+          <GreenTableFull
+            class="md:hidden"
+            v-for="(important, index) in ImportantGreen"
+            :key="index"
+            :Headline="important.Headline"
+            :From="important.From"
+            :Month="important.Month"
+            :NumberTime="important.NumberTime"
           />
         </div>
       </div>
-    </BlockSection>
-  </Container>
+
+      <div class="flex flex-row flex-wrap justify-between">
+        <div class="2xl:basis-6/12 basis-full">
+          <div
+            class="border-b-[1px] border-green-600 xl:pb-12 xl:mb-12 sm:pb-8 sm:mb-8 pb-6 mb-6 mx-2"
+          >
+            <h3>
+              <Headline3>
+                {{ $t("landing.block_2.h3_1") }}
+              </Headline3>
+            </h3>
+          </div>
+          <GreenTableFull
+            class="2xl:block hidden"
+            :key="ImportantGreen[0].id"
+            :Headline="ImportantGreen[0].Headline"
+            :From="ImportantGreen[0].From"
+            :Month="ImportantGreen[0].Month"
+            :NumberTime="ImportantGreen[0].NumberTime"
+          />
+          <div class="md:block hidden">
+            <div class="flex flex-row flex-wrap">
+              <GreenTable
+                v-for="(important, index) in ImportantGreen"
+                :key="index"
+                :Headline="important.Headline"
+                :From="important.From"
+                :Month="important.Month"
+                :NumberTime="important.NumberTime"
+                :class="{
+                  '2xl:hidden': index === 0,
+                  'hidden lg:block': index === 1,
+                }"
+              />
+            </div>
+          </div>
+          <GreenTableFull
+            class="lg:hidden md:block hidden"
+            :key="ImportantGreen[2].id"
+            :Headline="ImportantGreen[2].Headline"
+            :From="ImportantGreen[2].From"
+            :Month="ImportantGreen[2].Month"
+            :NumberTime="ImportantGreen[2].NumberTime"
+          />
+          <GreenTableFull
+            class="md:hidden"
+            v-for="(important, index) in ImportantGreen"
+            :key="index"
+            :Headline="important.Headline"
+            :From="important.From"
+            :Month="important.Month"
+            :NumberTime="important.NumberTime"
+          />
+        </div>
+        <div
+          class="2xl:basis-6/12 basis-full 2xl:mt-0 xl:mt-[80px] sm:mt-[28px] mt-6 px-2 2xl:pt-[76px]"
+        >
+          <div
+            class="flex flex-row flex-wrap 2xl:justify-end justify-center 2xl:items-start items-center"
+          >
+            <div
+              class="2xl:basis-1/6 lg:basis-1/12 px-2 lg:block hidden 2xl:order-1 order-2"
+            >
+              <img
+                src="/img/icons/!.svg"
+                alt=""
+                class="ml-auto 2xl:w-8 h-auto xl:w-6 lg:w-7"
+              />
+            </div>
+            <div
+              class="2xl:basis-5/6 lg:basis-7/12 md:basis-6/12 basis-full px-2 2xl:order-2 md:order-3 md:mb-0 sm:mb-6 mb-5"
+            >
+              <Paragraph2>
+                {{ $t("landing.block_2.p_b") }}
+              </Paragraph2>
+            </div>
+            <div
+              class="2xl:basis-5/6 lg:basis-4/12 md:basis-6/12 basis-full px-2 2xl:order-3 md:order-1"
+            >
+              <img src="/img/penalties_img.svg" alt="" class="w-full h-auto" />
+            </div>
+            <div class="2xl:basis-full">
+              <div class="flex mb-12"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </BlockSection>
 
   <!-- Block - 3 - POLYUS CONSULTING ADVANTAGES -->
   <BlockSection>
@@ -202,7 +252,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
               {{ $t("landing.block_3.h2") }}
             </Headline2>
           </h2>
-          <img src="/public/img/advantages.webp" alt="" />
+          <img src="/img/advantages.webp" alt="" />
         </div>
         <div class="basis-5/12">
           <ListAdvantage
@@ -237,7 +287,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
           </BigButton>
         </div>
         <div class="basis-8/12">
-          <img src="/public/img/process_img.svg" alt="" />
+          <img src="/img/process_img.svg" alt="" />
         </div>
       </div>
     </Container>
@@ -271,11 +321,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
     <Container>
       <div class="flex flex-row flex-wrap items-center justify-between">
         <div class="basis-5/12">
-          <img
-            src="/public/img/price_img.svg"
-            alt=""
-            class="w-[608px] h-auto"
-          />
+          <img src="/img/price_img.svg" alt="" class="w-[608px] h-auto" />
         </div>
         <div class="basis-6/12">
           <div
@@ -301,7 +347,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
               </Paragraph2>
               <br />
               <img
-                src="/public/img/icons/lines.svg"
+                src="/img/icons/lines.svg"
                 alt=""
                 class="transform scale-x-[-1]"
               />
@@ -335,19 +381,19 @@ export default {
     return {
       Reviews: [
         {
-          ImageReview: "/public/img/rewie_aidar.svg",
+          ImageReview: "/img/rewie_aidar.svg",
           NameReview: this.$t("landing.block_5.rewiew_1.name"),
           TextReview: this.$t("landing.block_5.rewiew_1.text"),
           TimeReview: "08.14.2023",
         },
         {
-          ImageReview: "/public/img/rewie_svetlana.svg",
+          ImageReview: "/img/rewie_svetlana.svg",
           NameReview: this.$t("landing.block_5.rewiew_2.name"),
           TextReview: this.$t("landing.block_5.rewiew_2.text"),
           TimeReview: "03.27.2024",
         },
         {
-          ImageReview: "/public/img/rewie_aidar.svg",
+          ImageReview: "/img/rewie_aidar.svg",
           NameReview: this.$t("landing.block_5.rewiew_3.name"),
           TextReview: this.$t("landing.block_5.rewiew_3.text"),
           TimeReview: "07.27.2024",
@@ -369,6 +415,12 @@ export default {
       ],
       ImportantGreen: [
         {
+          Headline: this.$t("landing.block_2.green_table_1.h4"),
+          From: this.$t("landing.block_2.green_table_1.p_1"),
+          Month: this.$t("landing.block_2.green_table_1.p_2"),
+          NumberTime: this.$t("landing.block_2.green_table_1.p_3"),
+        },
+        {
           Headline: this.$t("landing.block_2.green_table_2.h4"),
           From: this.$t("landing.block_2.green_table_2.p_1"),
           Month: this.$t("landing.block_2.green_table_2.p_2"),
@@ -382,6 +434,12 @@ export default {
         },
       ],
       ImportantRed: [
+        {
+          Headline: this.$t("landing.block_2.red_table_1.h4"),
+          Pinalty: this.$t("landing.block_2.red_table_1.p_1"),
+          From: this.$t("landing.block_2.red_table_1.p_2"),
+          Price: this.$t("landing.block_2.red_table_1.p_3"),
+        },
         {
           Headline: this.$t("landing.block_2.red_table_2.h4"),
           Pinalty: this.$t("landing.block_2.red_table_2.p_1"),
