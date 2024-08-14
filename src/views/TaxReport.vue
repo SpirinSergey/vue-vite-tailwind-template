@@ -244,24 +244,33 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <BlockSection>
     <Container>
       <div
-        class="flex flex-row justify-around border-[1px] border-green-600 py-20 rounded-[50px]"
+        class="flex flex-row flex-wrap 2xl:justify-evenly justify-between 2xl:border-[1px] 2xl:border-green-600 2xl:rounded-[50px] 2xl:py-20 mx-2"
       >
-        <div class="basis-4/12">
-          <h2 class="mb-20">
+        <div
+          class="2xl:basis-4/12 xl:basis-5/12 lg:basis-6/12 basis-full px-2 lg:order-1 order-2"
+        >
+          <h2 class="xl:mb-[78px] lg:mb-[58px] lg:block hidden">
             <Headline2>
               {{ $t("landing.block_3.h2") }}
             </Headline2>
           </h2>
-          <img src="/img/advantages.webp" alt="" />
+          <img src="/img/advantages.webp" alt="" class="w-full h-auto" />
         </div>
-        <div class="basis-5/12">
+        <div
+          class="2xl:basis-5/12 lg:basis-6/12 basis-full px-2 lg:order-2 order-1"
+        >
+          <h2 class="sm:mb-[60px] mb-12 lg:hidden">
+            <Headline2>
+              {{ $t("landing.block_3.h2") }}
+            </Headline2>
+          </h2>
           <ListAdvantage
             v-for="(list, index) in ListAdvantages"
             :key="index"
             :Headline="list.Headline"
             :Text="list.Text"
           />
-          <BigButton>
+          <BigButton class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 sm:mb-14 mb-12">
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
@@ -379,40 +388,6 @@ import RedTable from "../components/landing/important/RedTable.vue";
 export default {
   data() {
     return {
-      Reviews: [
-        {
-          ImageReview: "/img/rewie_aidar.svg",
-          NameReview: this.$t("landing.block_5.rewiew_1.name"),
-          TextReview: this.$t("landing.block_5.rewiew_1.text"),
-          TimeReview: "08.14.2023",
-        },
-        {
-          ImageReview: "/img/rewie_svetlana.svg",
-          NameReview: this.$t("landing.block_5.rewiew_2.name"),
-          TextReview: this.$t("landing.block_5.rewiew_2.text"),
-          TimeReview: "03.27.2024",
-        },
-        {
-          ImageReview: "/img/rewie_aidar.svg",
-          NameReview: this.$t("landing.block_5.rewiew_3.name"),
-          TextReview: this.$t("landing.block_5.rewiew_3.text"),
-          TimeReview: "07.27.2024",
-        },
-      ],
-      ListAdvantages: [
-        {
-          Headline: this.$t("landing.block_3.h3_1"),
-          Text: this.$t("landing.block_3.p_1"),
-        },
-        {
-          Headline: this.$t("landing.block_3.h3_2"),
-          Text: this.$t("landing.block_3.p_2"),
-        },
-        {
-          Headline: this.$t("landing.block_3.h3_2"),
-          Text: this.$t("landing.block_3.p_2"),
-        },
-      ],
       ImportantGreen: [
         {
           Headline: this.$t("landing.block_2.green_table_1.h4"),
@@ -451,6 +426,40 @@ export default {
           Pinalty: this.$t("landing.block_2.red_table_3.p_1"),
           From: this.$t("landing.block_2.red_table_3.p_2"),
           Price: this.$t("landing.block_2.red_table_3.p_3"),
+        },
+      ],
+      ListAdvantages: [
+        {
+          Headline: this.$t("landing.block_3.h3_1"),
+          Text: this.$t("landing.block_3.p_1"),
+        },
+        {
+          Headline: this.$t("landing.block_3.h3_2"),
+          Text: this.$t("landing.block_3.p_2"),
+        },
+        {
+          Headline: this.$t("landing.block_3.h3_3"),
+          Text: this.$t("landing.block_3.p_3"),
+        },
+      ],
+      Reviews: [
+        {
+          ImageReview: "/img/rewie_aidar.svg",
+          NameReview: this.$t("landing.block_5.rewiew_1.name"),
+          TextReview: this.$t("landing.block_5.rewiew_1.text"),
+          TimeReview: "08.14.2023",
+        },
+        {
+          ImageReview: "/img/rewie_svetlana.svg",
+          NameReview: this.$t("landing.block_5.rewiew_2.name"),
+          TextReview: this.$t("landing.block_5.rewiew_2.text"),
+          TimeReview: "03.27.2024",
+        },
+        {
+          ImageReview: "/img/rewie_aidar.svg",
+          NameReview: this.$t("landing.block_5.rewiew_3.name"),
+          TextReview: this.$t("landing.block_5.rewiew_3.text"),
+          TimeReview: "07.27.2024",
         },
       ],
     };
