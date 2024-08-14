@@ -314,7 +314,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <BlockSection>
     <Container>
       <div class="flex flex-row flex-wrap mx-2">
-        <div class="basis-full px-2 mb-[60px]">
+        <div class="basis-full px-2 xl:mb-[60px] md:mb-12 sm:mb-10 mb-8">
           <h2>
             <Headline2>
               {{ $t("landing.block_5.h2") }}
@@ -328,19 +328,20 @@ import RedTable from "../components/landing/important/RedTable.vue";
           :NameReview="review.NameReview"
           :TextReview="review.TextReview"
           :TimeReview="review.TimeReview"
+          
         />
       </div>
     </Container>
   </BlockSection>
 
-  <!-- Block - 6 -->
+  <!-- Block - 6 - PRICE -->
   <BlockSection>
     <Container>
-      <div class="flex flex-row flex-wrap items-center justify-between">
-        <div class="basis-5/12">
+      <div class="flex flex-row flex-wrap items-center justify-between mx-2">
+        <div class="basis-5/12 px-2">
           <img src="/img/price_img.svg" alt="" class="w-[608px] h-auto" />
         </div>
-        <div class="basis-6/12">
+        <div class="basis-6/12 px-2">
           <div
             class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] mb-12"
           >
@@ -375,7 +376,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
     </Container>
   </BlockSection>
 
-  <!-- Block - 7 -->
+  <!-- Block - 7 - CONTACT US -->
   <BlockSection>
     <Container>
       <div class="flex flex-row flex-wrap mx-2 items-end">
