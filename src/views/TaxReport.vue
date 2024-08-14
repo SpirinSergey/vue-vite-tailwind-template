@@ -281,22 +281,30 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <!-- Block - 4 - PROCESS -->
   <BlockSection>
     <Container>
-      <div class="flex flex-row">
-        <div class="basis-4/12">
-          <h2>
-            <Headline2>
-              {{ $t("landing.block_4.h2") }}
-            </Headline2>
-          </h2>
-          <Paragraph2>
-            {{ $t("landing.block_4.p") }}
-          </Paragraph2>
-          <BigButton>
+      <div class="flex flex-row flex-wrap mx-2">
+        <div class="2xl:basis-4/12 xl:basis-5/12 basis-full px-2">
+          <div
+            class="flex flex-row flex-wrap justify-between xl:border-none border-b-[1px] border-green-600 xl:pb-0 sm:pb-8 pb-6 xl:mb-0 sm:mb-8 mb-6"
+          >
+            <div class="xl:basis-full lg:basis-4/12 md:basis-5/12 basis-full">
+              <h2 class="xl:mb-[60px] md:mb-0 sm:mb-8 mb-6">
+                <Headline2>
+                  {{ $t("landing.block_4.h2") }}
+                </Headline2>
+              </h2>
+            </div>
+            <div class="xl:basis-full lg:basis-8/12 md:basis-7/12 basis-full">
+              <Paragraph2 class="xl:mb-[60px]">
+                {{ $t("landing.block_4.p") }}
+              </Paragraph2>
+            </div>
+          </div>
+          <BigButton class="xl:block hidden">
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
-        <div class="basis-8/12">
-          <img src="/img/process_img.svg" alt="" />
+        <div class="2xl:basis-8/12 xl:basis-7/12 basis-full px-2">
+          <img src="/img/process_img.svg" alt="" class="w-full h-auto" />
         </div>
       </div>
     </Container>
