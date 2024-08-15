@@ -33,7 +33,7 @@ export default {
             fontWeight: "500",
           },
         ],
-        h1: [
+        "h1": [
           "2.75rem",
           {
             lineHeight: "3.375rem",
@@ -54,7 +54,7 @@ export default {
             fontWeight: "500",
           },
         ],
-        h2: [
+        "h2": [
           "2rem",
           {
             lineHeight: "2.625rem",
@@ -76,7 +76,7 @@ export default {
             fontWeight: "500",
           },
         ],
-        h3: [
+        "h3": [
           "1.125rem",
           {
             lineHeight: "1.5rem",
@@ -98,7 +98,7 @@ export default {
             fontWeight: "400",
           },
         ],
-        h4: [
+        "h4": [
           "1.125rem",
           {
             lineHeight: "1.5rem",
@@ -120,7 +120,7 @@ export default {
             fontWeight: "500",
           },
         ],
-        p1: [
+        "p1": [
           "0.875rem",
           {
             lineHeight: "2.125rem",
@@ -142,7 +142,7 @@ export default {
             fontWeight: "400",
           },
         ],
-        p2: [
+        "p2": [
           "0.875rem",
           {
             lineHeight: "1.5rem",
@@ -164,10 +164,17 @@ export default {
             fontWeight: "400",
           },
         ],
-        p3: [
+        "p3": [
           "0.75rem",
           {
             lineHeight: "1.375rem",
+            fontWeight: "400",
+          },
+        ],
+        "xs": [
+          "12px",
+          {
+            lineHeight: "18px",
             fontWeight: "400",
           },
         ],

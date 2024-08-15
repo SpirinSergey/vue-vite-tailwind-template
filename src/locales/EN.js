@@ -23,6 +23,7 @@ export default {
       time_2: "Closed",
       tel: "+1 305-804-6752",
       adress: "1895 Tyler St, STE 404, Hollywood, FL 33020, US",
+      company: "© 2024 Polyus Consulting LLC",
     },
     buttons: {
       apply_now: "Apply now",
