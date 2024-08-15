@@ -388,8 +388,10 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <!-- Block - 7 - CONTACT US -->
   <BlockSection>
     <Container>
-      <div class="flex flex-row flex-wrap mx-2 items-end">
-        <div class="basis-full mb-14 px-2">
+      <div class="flex flex-row flex-wrap mx-2 xl:items-end items-center">
+        <div
+          class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start"
+        >
           <h2>
             <Headline2>
               {{ $t("landing.block_7.h2") }}

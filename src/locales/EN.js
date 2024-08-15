@@ -120,6 +120,7 @@ export default {
     },
     block_7: {
       h2: "CONTACT US",
+      p: 'By clicking the "Submit" button, you consent to the processing of your personal data.',
     },
   },
 };
