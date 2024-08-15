@@ -328,7 +328,6 @@ import RedTable from "../components/landing/important/RedTable.vue";
           :NameReview="review.NameReview"
           :TextReview="review.TextReview"
           :TimeReview="review.TimeReview"
-          
         />
       </div>
     </Container>
@@ -337,37 +336,47 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <!-- Block - 6 - PRICE -->
   <BlockSection>
     <Container>
-      <div class="flex flex-row flex-wrap items-center justify-between mx-2">
-        <div class="basis-5/12 px-2">
-          <img src="/img/price_img.svg" alt="" class="w-[608px] h-auto" />
+      <div
+        class="flex flex-row flex-wrap items-center md:justify-between justify-center mx-2"
+      >
+        <div
+          class="2xl:basis-5/12 lg:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2 md:order-1 order-2"
+        >
+          <img src="/img/price_img.svg" alt="" class="w-full h-auto" />
         </div>
-        <div class="basis-6/12 px-2">
+        <div
+          class="2xl:basis-6/12 xl:7/12 lg:basis-8/12 md:basis-7/12 basis-full px-2"
+        >
           <div
-            class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] mb-12"
+            class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] md:mb-12 mb-2"
           >
             <div
-              class="flex justify-between items-center bg-green-200 pb-6 pt-12 ps-6 rounded-ss-[50px]"
+              class="xl:flex justify-between items-center bg-green-200 pb-8 pt-12 ps-8 rounded-ss-[50px]"
             >
               <h2>
                 <Headline1>
                   {{ $t("landing.block_6.h2") }}
                 </Headline1>
               </h2>
-              <p class="pe-6">
+              <p class="pe-8 xl:block hidden">
                 <Headline3 class="text-green-600">
                   {{ $t("landing.block_6.hp") }}
                 </Headline3>
               </p>
             </div>
-            <div class="m-8 border-t-[1px] border-green-600 pt-8">
-              <Paragraph2>
+            <p class="p-8 xl:hidden block">
+              <Headline3 class="text-green-600">
+                {{ $t("landing.block_6.hp") }}
+              </Headline3>
+            </p>
+            <div class="m-8 xl:mt-8 mt-0 border-t-[1px] border-green-600 pt-8">
+              <Paragraph2 class="xl:pb-2 pb-3">
                 {{ $t("landing.block_6.p") }}
               </Paragraph2>
-              <br />
               <img
                 src="/img/icons/lines.svg"
                 alt=""
-                class="transform scale-x-[-1]"
+                class="transform scale-x-[-1] ml-auto xl:block hidden"
               />
             </div>
           </div>
