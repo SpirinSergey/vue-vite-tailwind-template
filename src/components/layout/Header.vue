@@ -7,48 +7,60 @@ import Link from "../text/Link.vue";
 
 <template>
   <Container>
-    <nav class="py-8 border-b-[1px] border-green-600">
-      <div class="flex flex-row items-center mx-2">
-        <div class="basis-3/12 px-2">
+    <nav class="py-8 border-b-[1px] border-green-600 2xl:mx-2">
+      <div class="flex flex-row items-center justify-between">
+        <div class="2xl:basis-3/12 lg:basis-2/12 sm:basis-3/12 basis-4/12 pe-2">
           <RouterLink to="/">
-            <img src="/img/logo.webp" alt="" class="w-[150px] h-auto" />
+            <img src="/public/img/logo.webp" alt="" class="w-[150px] h-auto" />
           </RouterLink>
         </div>
-        <div class="basis-7/12 px-2">
+        <div class="xl:basis-7/12 basis-8/12 px-2 lg:block hidden">
           <ul class="flex justify-between">
             <li>
-              <Link>
-                {{ $t("landing.header.important") }}
-              </Link>
+              <a href="/#important">
+                <Link>
+                  {{ $t("landing.header.important") }}
+                </Link>
+              </a>
             </li>
             <li>
-              <Paragraph2>
-                {{ $t("landing.header.advantages") }}
-              </Paragraph2>
+              <a href="/#advantages">
+                <Link>
+                  {{ $t("landing.header.advantages") }}
+                </Link>
+              </a>
             </li>
             <li>
-              <Paragraph2>
-                {{ $t("landing.header.process") }}
-              </Paragraph2>
+              <a href="/#process">
+                <Link>
+                  {{ $t("landing.header.process") }}
+                </Link>
+              </a>
             </li>
             <li>
-              <Paragraph2>
-                {{ $t("landing.header.reviews") }}
-              </Paragraph2>
+              <a href="/#reviews">
+                <Link>
+                  {{ $t("landing.header.reviews") }}
+                </Link>
+              </a>
             </li>
             <li>
-              <Paragraph2>
-                {{ $t("landing.header.about_us") }}
-              </Paragraph2>
+              <a href="/#footer">
+                <Link>
+                  {{ $t("landing.header.about_us") }}
+                </Link>
+              </a>
             </li>
             <li>
-              <Paragraph2>
-                {{ $t("landing.header.contact_us") }}
-              </Paragraph2>
+              <a href="/#contact">
+                <Link>
+                  {{ $t("landing.header.contact_us") }}
+                </Link>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="basis-2/12 px-2 text-end">
+        <div class="xl:basis-2/12 basis-1/12 ps-2 text-end">
           <SelectLanguages />
         </div>
       </div>

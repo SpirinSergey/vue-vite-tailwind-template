@@ -9,17 +9,19 @@ import Small from "../buttons/Small.vue";
 </script>
 
 <template>
-  <BlockSection>
+  <BlockSection id="footer">
     <Container>
       <div
-        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 sm:mx-2 sm:px-0 px-2 md:justify-between"
+        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between"
       >
         <div
-          class="2xl:basis-3/12 xl:basis-2/12 lg:basis-3/12 md:basis-6/12 basis-full px-2 lg:block hidden"
+          class="2xl:basis-3/12 xl:basis-2/12 lg:basis-3/12 md:basis-6/12 basis-full pe-2 lg:block hidden"
         >
-          <div class="flex flex-col items-start md:justify-between h-[320px]">
+          <div
+            class="flex flex-col items-start md:justify-between 2xl:h-[319px] xl:h-[320px] lg:h-[286px] h-[310px]"
+          >
             <img
-              src="/img/logo.webp"
+              src="/public/img/logo.webp"
               :alt="$t('landing.footer.company')"
               class="2xl:w-[293px] h-auto"
             />
@@ -28,16 +30,18 @@ import Small from "../buttons/Small.vue";
             </Paragraph3>
           </div>
         </div>
-        <div class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last px-2">
+        <div
+          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last pe-2 sm:ps-0 ps-2"
+        >
+          <img
+            src="/public/img/logo.webp"
+            :alt="$t('landing.footer.company')"
+            class="md:w-[181px] sm:w-[341px] w-[287px] h-auto md:mt-0 md:my-8 sm:my-[60px] my-8 lg:hidden"
+          />
           <h3 class="xl:mb-12 mb-8">
-            <img
-              src="/img/logo.webp"
-              :alt="$t('landing.footer.company')"
-              class="md:w-[181px] sm:w-[341px] w-[287px] h-auto md:my-8 sm:my-[60px] my-8 md:hidden"
-            />
-            <Headline3 class="text-green-600">
-              {{ $t("landing.footer.working_ours") }}
-            </Headline3>
+            <Headline3 class="text-green-600">{{
+              $t("landing.footer.working_ours")
+            }}</Headline3>
           </h3>
           <div class="flex justify-between mb-2">
             <Paragraph2>
@@ -101,7 +105,7 @@ import Small from "../buttons/Small.vue";
             </Paragraph3>
           </div>
         </div>
-        <div class="md:basis-5/12 basis-full px-2 md:order-3">
+        <div class="md:basis-5/12 basis-full sm:ps-0  ps-2 md:order-3">
           <div class="border-b-[1px] border-green-600 pb-4 mb-8">
             <div class="flex">
               <router-link to="/legal/terms-of-us" exact>
@@ -117,8 +121,16 @@ import Small from "../buttons/Small.vue";
             </div>
           </div>
           <div class="flex items-start mb-6">
-            <img src="/img/icons/icon_phone.svg" alt="" class="mt-1 me-2" />
-            <img src="/img/icons/icon_whatsapp.svg" alt="" class="mt-1 me-4" />
+            <img
+              src="/public/img/icons/icon_phone.svg"
+              alt=""
+              class="mt-1 me-2"
+            />
+            <img
+              src="/public/img/icons/icon_whatsapp.svg"
+              alt=""
+              class="mt-1 me-4"
+            />
             <a href="tel:+1 305-804-6752">
               <Paragraph2>
                 {{ $t("landing.footer.tel") }}
@@ -126,9 +138,13 @@ import Small from "../buttons/Small.vue";
             </a>
           </div>
           <div class="flex items-start mb-6">
-            <img src="/img/icons/icon_email.svg" alt="" class="mt-1 me-4" />
+            <img
+              src="/public/img/icons/icon_email.svg"
+              alt=""
+              class="mt-1 me-4"
+            />
             <a href="mailto:info@polyusconsulting.com">
-              <Paragraph2> info@polyusconsulting.com </Paragraph2>
+              <Paragraph2>info@polyusconsulting.com</Paragraph2>
             </a>
           </div>
 
@@ -143,6 +159,11 @@ import Small from "../buttons/Small.vue";
           <Small class="">
             {{ $t("landing.header.contact_us") }}
           </Small>
+          <div class="lg:hidden md:block hidden md:mt-16 sm:mt-14 mt-12">
+            <Paragraph3>
+              {{ $t("landing.footer.company") }}
+            </Paragraph3>
+          </div>
         </div>
       </div>
     </Container>

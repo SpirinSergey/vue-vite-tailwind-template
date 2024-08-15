@@ -24,10 +24,10 @@ import RedTable from "../components/landing/important/RedTable.vue";
   <!-- Block - 1 - TOP -->
   <BlockSection>
     <Container
-      class="border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16"
+      class=""
     >
       <div
-        class="flex flex-row flex-wrap items-center xl:justify-between justify-center mx-2"
+        class="flex flex-row flex-wrap items-center xl:justify-between justify-center border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16"
       >
         <div
           class="basis-full sm:basis-10/12 xl:basis-5/12 px-2 xl:text-left text-center"
@@ -58,7 +58,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 2 - IMPORTANT -->
-  <BlockSection>
+  <BlockSection id="important"> 
     <Container>
       <div
         class="flex flex-row flex-wrap justify-between 2xl:mb-[180px] xl:mb-[140px] md:mb-[100px] sm:md-[80px] mb-[60px]"
@@ -220,14 +220,14 @@ import RedTable from "../components/landing/important/RedTable.vue";
               />
             </div>
             <div
-              class="2xl:basis-5/6 lg:basis-7/12 md:basis-6/12 basis-full px-2 2xl:order-2 md:order-3 md:mb-0 sm:mb-6 mb-5"
+              class="2xl:basis-5/6 lg:basis-7/12 md:basis-6/12 basis-full sm:px-2 2xl:order-2 md:order-3 md:mb-0 sm:mb-6 mb-5"
             >
               <Paragraph2>
                 {{ $t("landing.block_2.p_b") }}
               </Paragraph2>
             </div>
             <div
-              class="2xl:basis-5/6 lg:basis-4/12 md:basis-6/12 basis-full px-2 2xl:order-3 md:order-1"
+              class="2xl:basis-5/6 lg:basis-4/12 md:basis-6/12 basis-full sm:px-2 2xl:order-3 md:order-1"
             >
               <img src="/img/penalties_img.svg" alt="" class="w-full h-auto" />
             </div>
@@ -241,10 +241,10 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 3 - POLYUS CONSULTING ADVANTAGES -->
-  <BlockSection>
+  <BlockSection id="advantages">
     <Container>
       <div
-        class="flex flex-row flex-wrap 2xl:justify-evenly justify-between 2xl:border-[1px] 2xl:border-green-600 2xl:rounded-[50px] 2xl:py-20 mx-2"
+        class="flex flex-row flex-wrap 2xl:justify-evenly justify-between 2xl:border-[1px] 2xl:border-green-600 2xl:rounded-[50px] 2xl:py-20"
       >
         <div
           class="2xl:basis-4/12 xl:basis-5/12 lg:basis-6/12 basis-full px-2 lg:order-1 order-2"
@@ -279,9 +279,9 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 4 - PROCESS -->
-  <BlockSection>
+  <BlockSection id="process">
     <Container>
-      <div class="flex flex-row flex-wrap mx-2">
+      <div class="flex flex-row flex-wrap">
         <div class="2xl:basis-4/12 xl:basis-5/12 basis-full px-2">
           <div
             class="flex flex-row flex-wrap justify-between xl:border-none border-b-[1px] border-green-600 xl:pb-0 sm:pb-8 pb-6 xl:mb-0 sm:mb-8 mb-6"
@@ -311,9 +311,9 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 5 - REVIEWS -->
-  <BlockSection>
+  <BlockSection id="reviews">
     <Container>
-      <div class="flex flex-row flex-wrap mx-2">
+      <div class="flex flex-row flex-wrap">
         <div class="basis-full px-2 xl:mb-[60px] md:mb-12 sm:mb-10 mb-8">
           <h2>
             <Headline2>
@@ -334,10 +334,10 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 6 - PRICE -->
-  <BlockSection>
+  <BlockSection id="about_us">
     <Container>
       <div
-        class="flex flex-row flex-wrap items-center md:justify-between justify-center mx-2"
+        class="flex flex-row flex-wrap items-center md:justify-between justify-center"
       >
         <div
           class="2xl:basis-5/12 lg:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2 md:order-1 order-2"
@@ -386,11 +386,11 @@ import RedTable from "../components/landing/important/RedTable.vue";
   </BlockSection>
 
   <!-- Block - 7 - CONTACT US -->
-  <BlockSection>
+  <BlockSection id="contact">
     <Container>
-      <div class="flex flex-row flex-wrap mx-2 xl:items-end items-center">
+      <div class="flex flex-row flex-wrap xl:items-end items-center md:justify-start justify-center">
         <div
-          class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start"
+          class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start flex sm:justify-center"
         >
           <h2>
             <Headline2>
