@@ -11,7 +11,7 @@ import Paragraph2 from "../../text/Paragraph2.vue";
       class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px]"
     >
       <div class="h-[130px] bg-gray-200 pb-6 pt-12 ps-6 rounded-ss-[50px]">
-        <Headline4 class="text-green-600">
+        <Headline4 class="text-green-600 xl:pe-14 lg:pe-9 md:pe-16">
           {{ Headline }}
         </Headline4>
       </div>

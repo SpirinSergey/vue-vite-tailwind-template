@@ -7,11 +7,11 @@ import Link from "../text/Link.vue";
 
 <template>
   <Container>
-    <nav class="py-8 border-b-[1px] border-green-600 2xl:mx-2">
+    <nav class="py-8 border-b-[1px] border-green-600 mx-2">
       <div class="flex flex-row items-center justify-between">
         <div class="2xl:basis-3/12 lg:basis-2/12 sm:basis-3/12 basis-4/12 pe-2">
           <RouterLink to="/">
-            <img src="/public/img/logo.webp" alt="" class="w-[150px] h-auto" />
+            <img src="/img/logo.webp" alt="" class="w-[150px] h-auto" />
           </RouterLink>
         </div>
         <div class="xl:basis-7/12 basis-8/12 px-2 lg:block hidden">

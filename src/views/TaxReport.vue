@@ -18,6 +18,7 @@ import FormBottom from "../components/landing/FormBottom.vue";
 import GreenTableFull from "../components/landing/important/GreenTableFull.vue";
 import GreenTable from "../components/landing/important/GreenTable.vue";
 import RedTable from "../components/landing/important/RedTable.vue";
+import RedTableFull from "../components/landing/important/RedTableFull.vue";
 </script>
 
 <template>
@@ -27,10 +28,10 @@ import RedTable from "../components/landing/important/RedTable.vue";
       class=""
     >
       <div
-        class="flex flex-row flex-wrap items-center xl:justify-between justify-center border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16"
+        class="flex flex-row flex-wrap items-center xl:justify-between justify-center border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16 mx-2"
       >
         <div
-          class="basis-full sm:basis-10/12 xl:basis-5/12 px-2 xl:text-left text-center"
+          class="basis-full sm:basis-10/12 xl:basis-5/12 xl:pe-2 xl:text-left text-center"
         >
           <h1 class="mb-5 sm:mb-6 xl:mb-8">
             <Headline1>
@@ -46,7 +47,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
-        <div class="basis-full sm:basis-10/12 xl:basis-6/12 px-2">
+        <div class="basis-full sm:basis-10/12 xl:basis-6/12 xl:ps-2">
           <img
             src="/img/preparation_tax_report.webp"
             alt="Preparation of the annual tax reporting"
@@ -154,31 +155,32 @@ import RedTable from "../components/landing/important/RedTable.vue";
       <div class="flex flex-row flex-wrap justify-between">
         <div class="2xl:basis-6/12 basis-full">
           <div
-            class="border-b-[1px] border-green-600 xl:pb-12 xl:mb-12 sm:pb-8 sm:mb-8 pb-6 mb-6 mx-2"
+            class="border-b-[1px] border-red-600 xl:pb-12 xl:mb-12 sm:pb-8 sm:mb-8 pb-6 mb-6 mx-2"
           >
             <h3>
               <Headline3>
-                {{ $t("landing.block_2.h3_1") }}
+                {{ $t("landing.block_2.h3_2") }}
               </Headline3>
             </h3>
           </div>
-          <GreenTableFull
+          <RedTableFull
             class="2xl:block hidden"
-            :key="ImportantGreen[0].id"
-            :Headline="ImportantGreen[0].Headline"
-            :From="ImportantGreen[0].From"
-            :Month="ImportantGreen[0].Month"
-            :NumberTime="ImportantGreen[0].NumberTime"
+            :key="ImportantRed[0].id"
+            :Headline="ImportantRed[0].Headline"
+            :Pinalty="ImportantRed[0].Pinalty"
+            :From="ImportantRed[0].From"
+            :Price="ImportantRed[0].Price"
           />
           <div class="md:block hidden">
             <div class="flex flex-row flex-wrap">
-              <GreenTable
-                v-for="(important, index) in ImportantGreen"
+              <RedTable
+                v-for="(important, index) in ImportantRed"
                 :key="index"
                 :Headline="important.Headline"
+                :Pinalty="important.Pinalty"
                 :From="important.From"
-                :Month="important.Month"
-                :NumberTime="important.NumberTime"
+                :Price="important.Price"
+                :Tumbler="important.Tumbler"
                 :class="{
                   '2xl:hidden': index === 0,
                   'hidden lg:block': index === 1,
@@ -186,22 +188,26 @@ import RedTable from "../components/landing/important/RedTable.vue";
               />
             </div>
           </div>
-          <GreenTableFull
+          <RedTableFull
             class="lg:hidden md:block hidden"
-            :key="ImportantGreen[2].id"
-            :Headline="ImportantGreen[2].Headline"
-            :From="ImportantGreen[2].From"
-            :Month="ImportantGreen[2].Month"
-            :NumberTime="ImportantGreen[2].NumberTime"
+            :key="ImportantRed[2].id"
+            :Headline="ImportantRed[2].Headline"
+            :Pinalty="ImportantRed[2].Pinalty"
+            :From="ImportantRed[2].From"
+            :Price="ImportantRed[2].Price"
+            :Tumbler="ImportantRed[2].Tumbler"
+            :Tumbler2="ImportantRed[2].Tumbler2"
           />
-          <GreenTableFull
+          <RedTableFull
             class="md:hidden"
-            v-for="(important, index) in ImportantGreen"
+            v-for="(important, index) in ImportantRed"
             :key="index"
             :Headline="important.Headline"
+            :Pinalty="important.Pinalty"
             :From="important.From"
-            :Month="important.Month"
-            :NumberTime="important.NumberTime"
+            :Price="important.Price"
+            :Tumbler="important.Tumbler"
+            :Tumbler2="important.Tumbler2"
           />
         </div>
         <div
@@ -231,9 +237,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
             >
               <img src="/img/penalties_img.svg" alt="" class="w-full h-auto" />
             </div>
-            <div class="2xl:basis-full">
-              <div class="flex mb-12"></div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -270,7 +274,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
             :Headline="list.Headline"
             :Text="list.Text"
           />
-          <BigButton class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 sm:mb-14 mb-12">
+          <BigButton class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 2xl:mb-0 sm:mb-14 mb-12">
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
@@ -340,12 +344,12 @@ import RedTable from "../components/landing/important/RedTable.vue";
         class="flex flex-row flex-wrap items-center md:justify-between justify-center"
       >
         <div
-          class="2xl:basis-5/12 lg:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2 md:order-1 order-2"
+          class="2xl:basis-5/12 lg:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2 md:order-first order-last"
         >
           <img src="/img/price_img.svg" alt="" class="w-full h-auto" />
         </div>
         <div
-          class="2xl:basis-6/12 xl:7/12 lg:basis-8/12 md:basis-7/12 basis-full px-2"
+          class="2xl:basis-6/12 xl:7/12 lg:basis-8/12 md:basis-7/12 basis-full px-2 md:order-last order-first"
         >
           <div
             class="border-[1px] border-green-600 rounded-ss-[50px] rounded-ee-[50px] md:mb-12 mb-2"
@@ -390,7 +394,7 @@ import RedTable from "../components/landing/important/RedTable.vue";
     <Container>
       <div class="flex flex-row flex-wrap xl:items-end items-center md:justify-start justify-center">
         <div
-          class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start flex sm:justify-center"
+          class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start flex sm:justify-center md:justify-start"
         >
           <h2>
             <Headline2>
@@ -429,11 +433,12 @@ export default {
         },
       ],
       ImportantRed: [
-        {
+        { 
           Headline: this.$t("landing.block_2.red_table_1.h4"),
           Pinalty: this.$t("landing.block_2.red_table_1.p_1"),
           From: this.$t("landing.block_2.red_table_1.p_2"),
           Price: this.$t("landing.block_2.red_table_1.p_3"),
+          Tumbler: true,
         },
         {
           Headline: this.$t("landing.block_2.red_table_2.h4"),
@@ -446,6 +451,7 @@ export default {
           Pinalty: this.$t("landing.block_2.red_table_3.p_1"),
           From: this.$t("landing.block_2.red_table_3.p_2"),
           Price: this.$t("landing.block_2.red_table_3.p_3"),
+          Tumbler2: true,
         },
       ],
       ListAdvantages: [

@@ -26,7 +26,7 @@ import Paragraph3 from "../../components/text/Paragraph3.vue";
               class="ps-2 text-green-600 hover:underline"
             >
               <Paragraph3>
-                {{ $t("footer.privacy_policy") }}
+                {{ $t("PrivacyPolicy[0].h1") }}
               </Paragraph3>
             </router-link>
           </div>

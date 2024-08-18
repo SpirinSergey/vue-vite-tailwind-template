@@ -12,7 +12,7 @@ import Small from "../buttons/Small.vue";
   <BlockSection id="footer">
     <Container>
       <div
-        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between"
+        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between mx-2 "
       >
         <div
           class="2xl:basis-3/12 xl:basis-2/12 lg:basis-3/12 md:basis-6/12 basis-full pe-2 lg:block hidden"
@@ -21,7 +21,7 @@ import Small from "../buttons/Small.vue";
             class="flex flex-col items-start md:justify-between 2xl:h-[319px] xl:h-[320px] lg:h-[286px] h-[310px]"
           >
             <img
-              src="/public/img/logo.webp"
+              src="/img/logo.webp"
               :alt="$t('landing.footer.company')"
               class="2xl:w-[293px] h-auto"
             />
@@ -31,10 +31,10 @@ import Small from "../buttons/Small.vue";
           </div>
         </div>
         <div
-          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last pe-2 sm:ps-0 ps-2"
+          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last px-2 "
         >
           <img
-            src="/public/img/logo.webp"
+            src="/img/logo.webp"
             :alt="$t('landing.footer.company')"
             class="md:w-[181px] sm:w-[341px] w-[287px] h-auto md:mt-0 md:my-8 sm:my-[60px] my-8 lg:hidden"
           />
@@ -105,29 +105,29 @@ import Small from "../buttons/Small.vue";
             </Paragraph3>
           </div>
         </div>
-        <div class="md:basis-5/12 basis-full sm:ps-0  ps-2 md:order-3">
+        <div class="md:basis-5/12 basis-full ps-2 md:order-3">
           <div class="border-b-[1px] border-green-600 pb-4 mb-8">
             <div class="flex">
               <router-link to="/legal/terms-of-us" exact>
                 <Link class="xl:me-[116px] md:me-12 me-9">
-                  {{ $t("landing.footer.terms") }}
+                  {{ $t("TermsOfUs[0].h1") }}
                 </Link>
               </router-link>
               <router-link to="/legal/privacy-policy" exact>
                 <Link>
-                  {{ $t("landing.footer.privacy") }}
+                  {{ $t("PrivacyPolicy[0].h1") }}
                 </Link>
               </router-link>
             </div>
           </div>
           <div class="flex items-start mb-6">
             <img
-              src="/public/img/icons/icon_phone.svg"
+              src="/img/icons/icon_phone.svg"
               alt=""
               class="mt-1 me-2"
             />
             <img
-              src="/public/img/icons/icon_whatsapp.svg"
+              src="/img/icons/icon_whatsapp.svg"
               alt=""
               class="mt-1 me-4"
             />
@@ -139,7 +139,7 @@ import Small from "../buttons/Small.vue";
           </div>
           <div class="flex items-start mb-6">
             <img
-              src="/public/img/icons/icon_email.svg"
+              src="/img/icons/icon_email.svg"
               alt=""
               class="mt-1 me-4"
             />
@@ -169,3 +169,4 @@ import Small from "../buttons/Small.vue";
     </Container>
   </BlockSection>
 </template>
+
