@@ -5,8 +5,8 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   resolve: {
     alias: {
-      "@text": "../../components/text",
-      "@shared": "../../components/shared/",
+      "@text": "../components/text",
+      "@shared": "../components/shared/",
     },
   },
   plugins: [vue()],

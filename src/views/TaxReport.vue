@@ -1,14 +1,16 @@
 <script setup>
-import Container from "../components/shared/Container.vue";
-import BlockSection from "../components/shared/BlockSection.vue";
+import Container from "@shared/Container.vue";
+import BlockSection from "@shared/BlockSection.vue";
+
+import Headline1 from "@text/Headline1.vue";
+import Headline2 from "@text/Headline2.vue";
+import Headline3 from "@text/Headline3.vue";
+import Headline4 from "@text/Headline4.vue";
+import Paragraph1 from "@text/Paragraph1.vue";
+import Paragraph2 from "@text/Paragraph2.vue";
+import Paragraph3 from "@text/Paragraph3.vue";
+
 import BigButton from "../components/buttons/Big.vue";
-import Headline1 from "../components/text/Headline1.vue";
-import Headline2 from "../components/text/Headline2.vue";
-import Headline3 from "../components/text/Headline3.vue";
-import Headline4 from "../components/text/Headline4.vue";
-import Paragraph1 from "../components/text/Paragraph1.vue";
-import Paragraph2 from "../components/text/Paragraph2.vue";
-import Paragraph3 from "../components/text/Paragraph3.vue";
 
 import Review from "../components/landing/Review.vue";
 import ListAdvantage from "../components/landing/ListAdvantage.vue";
@@ -24,9 +26,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
 <template>
   <!-- Block - 1 - TOP -->
   <BlockSection>
-    <Container
-      class=""
-    >
+    <Container class="">
       <div
         class="flex flex-row flex-wrap items-center xl:justify-between justify-center border-b-[1px] border-green-600 2xl:mt-14 xl:mt-12 md:mt-32 sm:mt-24 mt-20 2xl:pb-14 xl:pb-32 md:pb-24 sm:pb-20 pb-16 mx-2"
       >
@@ -59,7 +59,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
   </BlockSection>
 
   <!-- Block - 2 - IMPORTANT -->
-  <BlockSection id="important"> 
+  <!-- <BlockSection id="important">
     <Container>
       <div
         class="flex flex-row flex-wrap justify-between 2xl:mb-[180px] xl:mb-[140px] md:mb-[100px] sm:md-[80px] mb-[60px]"
@@ -237,12 +237,11 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
             >
               <img src="/img/penalties_img.svg" alt="" class="w-full h-auto" />
             </div>
-            
           </div>
         </div>
       </div>
     </Container>
-  </BlockSection>
+  </BlockSection> -->
 
   <!-- Block - 3 - POLYUS CONSULTING ADVANTAGES -->
   <BlockSection id="advantages">
@@ -271,10 +270,12 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           <ListAdvantage
             v-for="(list, index) in ListAdvantages"
             :key="index"
-            :Headline="list.Headline"
-            :Text="list.Text"
+            :Headline="list.h3"
+            :Text="list.p"
           />
-          <BigButton class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 2xl:mb-0 sm:mb-14 mb-12">
+          <BigButton
+            class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 2xl:mb-0 sm:mb-14 mb-12"
+          >
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
@@ -328,10 +329,10 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
         <Review
           v-for="(review, index) in Reviews"
           :key="index"
-          :ImageReview="review.ImageReview"
-          :NameReview="review.NameReview"
-          :TextReview="review.TextReview"
-          :TimeReview="review.TimeReview"
+          :ImageReview="review.img"
+          :NameReview="review.name"
+          :TextReview="review.text"
+          :TimeReview="review.time"
         />
       </div>
     </Container>
@@ -392,7 +393,9 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
   <!-- Block - 7 - CONTACT US -->
   <BlockSection id="contact">
     <Container>
-      <div class="flex flex-row flex-wrap xl:items-end items-center md:justify-start justify-center">
+      <div
+        class="flex flex-row flex-wrap xl:items-end items-center md:justify-start justify-center"
+      >
         <div
           class="basis-full xl:mb-[60px] md:mb-12 sm:mb-10 mb-8 px-2 md:text-start sm:text-center text-start flex sm:justify-center md:justify-start"
         >
@@ -410,6 +413,14 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
 
 <script>
 export default {
+  computed: {
+    Reviews() {
+      return this.$tm("landing.block_5.rewiew");
+    },
+    ListAdvantages() {
+      return this.$tm("landing.block_3.list");
+    },
+  },
   data() {
     return {
       ImportantGreen: [
@@ -433,7 +444,7 @@ export default {
         },
       ],
       ImportantRed: [
-        { 
+        {
           Headline: this.$t("landing.block_2.red_table_1.h4"),
           Pinalty: this.$t("landing.block_2.red_table_1.p_1"),
           From: this.$t("landing.block_2.red_table_1.p_2"),
@@ -452,40 +463,6 @@ export default {
           From: this.$t("landing.block_2.red_table_3.p_2"),
           Price: this.$t("landing.block_2.red_table_3.p_3"),
           Tumbler2: true,
-        },
-      ],
-      ListAdvantages: [
-        {
-          Headline: this.$t("landing.block_3.h3_1"),
-          Text: this.$t("landing.block_3.p_1"),
-        },
-        {
-          Headline: this.$t("landing.block_3.h3_2"),
-          Text: this.$t("landing.block_3.p_2"),
-        },
-        {
-          Headline: this.$t("landing.block_3.h3_3"),
-          Text: this.$t("landing.block_3.p_3"),
-        },
-      ],
-      Reviews: [
-        {
-          ImageReview: "/img/rewie_aidar.svg",
-          NameReview: this.$t("landing.block_5.rewiew_1.name"),
-          TextReview: this.$t("landing.block_5.rewiew_1.text"),
-          TimeReview: "08.14.2023",
-        },
-        {
-          ImageReview: "/img/rewie_svetlana.svg",
-          NameReview: this.$t("landing.block_5.rewiew_2.name"),
-          TextReview: this.$t("landing.block_5.rewiew_2.text"),
-          TimeReview: "03.27.2024",
-        },
-        {
-          ImageReview: "/img/rewie_aidar.svg",
-          NameReview: this.$t("landing.block_5.rewiew_3.name"),
-          TextReview: this.$t("landing.block_5.rewiew_3.text"),
-          TimeReview: "07.27.2024",
         },
       ],
     };

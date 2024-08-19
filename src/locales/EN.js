@@ -1,5 +1,3 @@
-import PrivacyPolicy from "../views/legal/PrivacyPolicy.vue";
-
 export default {
   landing: {
     header: {
@@ -28,6 +26,7 @@ export default {
     buttons: {
       apply_now: "Apply now",
       submit: "Submit",
+      accept: "Accept",
     },
     forms: {
       name: "Name*",
@@ -35,7 +34,7 @@ export default {
       message: "Message",
     },
     cookie: {
-      title: "Notice.",
+      title: "Notice. ",
       description:
         "TermsFeed uses cookies to provide necessary website functionality, improve your experience and analyze our traffic. By using our website, you agree to our",
     },
@@ -47,7 +46,7 @@ export default {
       h2: "IMPORTANT!",
       p: "There are requirements for all US companies to file annual tax returns with the federal IRS and the state, whether the business was operating or not.",
       h3_1: "US corporate reporting calendar",
-      green_table_1: {
+      green_table: {
         h4: "Partnerships LLC (Two or more participants)",
         p_1: "Form 1065",
         p_2: "March",
@@ -88,12 +87,20 @@ export default {
     },
     block_3: {
       h2: "POLYUS CONSULTING ADVANTAGES",
-      h3_1: "Impeccable track record",
-      p_1: "Polyus Consulting is a team of qualified specialists with extensive experience in taxation, ensuring that your reports comply with the current legal requirements.",
-      h3_2: "Reduction of tax audit risks",
-      p_2: "Correct preparation of reports and minimization of errors reduce the probability of receiving tax notifications and audits. Our specialists thoroughly check all documents before they are submitted.",
-      h3_3: "Time saving",
-      p_3: "Preparing tax reports requires considerable time and effort. By turning to professionals, you free up your resources for more important business tasks, allowing you to focus on the development and growth of your company.",
+      list: [
+        {
+          h3: "Impeccable track record",
+          p: "Polyus Consulting is a team of qualified specialists with extensive experience in taxation, ensuring that your reports comply with the current legal requirements.",
+        },
+        {
+          h3: "Reduction of tax audit risks",
+          p: "Correct preparation of reports and minimization of errors reduce the probability of receiving tax notifications and audits. Our specialists thoroughly check all documents before they are submitted.",
+        },
+        {
+          h3: "Time saving",
+          p: "Preparing tax reports requires considerable time and effort. By turning to professionals, you free up your resources for more important business tasks, allowing you to focus on the development and growth of your company.",
+        },
+      ],
     },
     block_4: {
       h2: "PROCESS",
@@ -101,18 +108,26 @@ export default {
     },
     block_5: {
       h2: "REVIEWS",
-      rewiew_1: {
-        name: "Aidar Madaminov",
-        text: "As a business owner in Florida, I used the services of Polyus Consulting to prepare my tax report and saved a lot of time and nerves. Everything was prepared without errors and turned in on time. I recommend!",
-      },
-      rewiew_2: {
-        name: "Svetlana Romanova",
-        text: "I was looking for help with my annual US tax report and turned to Polyus Consulting. Lolita and her team are high level professionals. Now I am their regular client.",
-      },
-      rewiew_3: {
-        name: "Edgar Lawrence",
-        text: "This is not the first time I have contacted Polyus Consulting and I appreciate their responsible attitude to work. They provide excellent service and optimal solutions for tax reporting. I feel confident with them!",
-      },
+      rewiew: [
+        {
+          name: "Aidar Madaminov",
+          text: "As a business owner in Florida, I used the services of Polyus Consulting to prepare my tax report and saved a lot of time and nerves. Everything was prepared without errors and turned in on time. I recommend!",
+          img: "/img/rewie_aidar.svg",
+          time: "08.14.2023",
+        },
+        {
+          name: "Svetlana Romanova",
+          text: "I was looking for help with my annual US tax report and turned to Polyus Consulting. Lolita and her team are high level professionals. Now I am their regular client.",
+          img: "/img/rewie_svetlana.svg",
+          time: "03.27.2024",
+        },
+        {
+          name: "Edgar Lawrence",
+          text: "This is not the first time I have contacted Polyus Consulting and I appreciate their responsible attitude to work. They provide excellent service and optimal solutions for tax reporting. I feel confident with them!",
+          img: "/img/rewie_aidar.svg",
+          time: "07.27.2024",
+        },
+      ],
     },
     block_6: {
       h2: "PRICE",

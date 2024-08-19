@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import "./style.css";
-import { createPinia } from "pinia";
 
 import { createI18n } from "vue-i18n";
 import localesEn from "./locales/EN.js";
@@ -13,8 +12,8 @@ import VueCookies from "vue-cookies";
 import { createWebHistory, createRouter } from "vue-router";
 
 import TaxReport from "./views/TaxReport.vue";
-import PrivacyPolicy from "./views/legal/PrivacyPolicy.vue";
-import TermsOfUs from "./views/legal/TermsOfUs.vue";
+import PrivacyPolicy from "./views/PrivacyPolicy.vue";
+import TermsOfUs from "./views/TermsOfUs.vue";
 
 const routes = [
   { path: "/", component: TaxReport },
@@ -25,10 +24,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
-
-const pinia = createPinia();
-
 
 const messages = {
   EN: localesEn,
@@ -45,7 +44,6 @@ export default i18n;
 
 const app = createApp(App);
 
-app.use(pinia);
 app.use(i18n);
 app.use(router);
 app.use(VueCookies);

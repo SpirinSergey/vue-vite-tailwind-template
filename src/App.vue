@@ -9,7 +9,7 @@ import Cookies from "./components/shared/Cookies.vue";
     <Header />
   </header>
   <main>
-    <RouterView />
+    <RouterView></RouterView>
   </main>
   <footer>
     <Footer />

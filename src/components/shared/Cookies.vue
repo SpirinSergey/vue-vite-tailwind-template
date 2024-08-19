@@ -8,12 +8,16 @@ import Paragraph3 from "../../components/text/Paragraph3.vue";
 <template>
   <div
     v-if="showCookieConsent"
-    class="fixed inset-x-0 bottom-0 z-[9999999] bg-black text-white bg-opacity-75"
+    class="fixed w-full inset-x-0 bottom-0 z-50 "
   >
     <Container>
-      <div class="mx-2 flex flex-row flex-wrap items-center py-3">
-        <div class="mb-3 basis-full px-2 lg:mb-0 lg:basis-10/12">
-          <div class="flex">
+      <div
+        class="flex flex-row sm:flex-wrap flex-wrap items-center md:justify-between justify-center py-6 opacity-90 bg-gray-700 text-white rounded-t-[20px] mx-2"
+      >
+        <div
+          class="basis-full md:text-start text-center px-6 2xl:basis-9/12 xl:basis-10/12 md:basis-9/12"
+        >
+          <p class="md:mb-0 mb-6">
             <Paragraph2>
               {{ $t("landing.cookie.title") }}
             </Paragraph2>
@@ -23,17 +27,24 @@ import Paragraph3 from "../../components/text/Paragraph3.vue";
             <router-link
               to="/legal/privacy-policy"
               exact
-              class="ps-2 text-green-600 hover:underline"
+              class="ps-2 hover:underline"
             >
               <Paragraph3>
                 {{ $t("PrivacyPolicy[0].h1") }}
               </Paragraph3>
             </router-link>
-          </div>
+          </p>
         </div>
-        <div class="basis-full px-2 text-end lg:basis-2/12">
-          <Small class="mb-4 me-4 sm:mb-0 sm:me-0" @click="acceptCookies">
-            {{ $t("landing.buttons.submit") }}
+        <div class="basis-full px-6 md:text-end text-center 2xl:basis-3/12 xl:basis-2/12 md:basis-3/12">
+          <Small
+            class="mb-4 me-4 sm:mb-0 sm:me-0 text-black bg-gray-600"
+            @click="acceptCookies"
+          >
+            <button>
+              <Paragraph2>
+                {{ $t("landing.buttons.accept") }}
+              </Paragraph2>
+            </button>
           </Small>
         </div>
       </div>
