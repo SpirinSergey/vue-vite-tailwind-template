@@ -20,7 +20,7 @@ import ImgRedLines from "../../landing/important/ImgRedLines.vue";
             </Paragraph2>
           </h4>
 
-          <ImgDoubleRedArrow class="h-[23px] w-[18px] rotate-[-90deg]" />
+          <ImgDoubleRedArrow class="h-[23px] w-[18px] rotate-[-90deg] md:block hidden" />
         </div>
       </div>
       <div class="flex flex-row lg:flex-wrap justify-between items-end p-6 ps-0">
@@ -31,10 +31,10 @@ import ImgRedLines from "../../landing/important/ImgRedLines.vue";
             </Paragraph2>
           </p>
         </div>
-        <div class="basis-6/12">
-          <ImgRedLines></ImgRedLines>
+        <div class="lg:basis-6/12 basis-5/12">
+          <ImgRedLines class="w-full h-auto" />
         </div>
-        <div v-if="From" class="basis-6/12">
+        <div v-if="From" class="lg:basis-6/12 basis-7/12">
           <div class="text-end">
             <p class="my-4">
               <Paragraph2>
@@ -53,7 +53,7 @@ import ImgRedLines from "../../landing/important/ImgRedLines.vue";
             </p>
           </div>
         </div>
-        <div v-if="t_2" class="basis-6/12 lg:hidden">
+        <div v-if="t_2" class="lg:basis-6/12 basis-7/12 lg:hidden">
           <div class="flex flex-row flex-wrap items-end text-end justify-end">
             <p class="my-4">
               <Paragraph2>

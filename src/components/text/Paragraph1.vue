@@ -1,5 +1,5 @@
 <template>
-  <p class="font-Unbounded-Medium text-p1 md:text-p1-md xl:text-p1-xl">
+  <span class="font-Unbounded-Medium text-p1 md:text-p1-md xl:text-p1-xl">
     <slot />
-  </p>
+  </span>
 </template>

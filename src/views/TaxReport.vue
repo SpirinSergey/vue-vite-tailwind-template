@@ -87,9 +87,11 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
                   alt=""
                 />
               </div>
-              <Paragraph1 class="2xl:mb-[96px] md:mb-0 sm:mb-10 mb-8">
-                {{ $t("landing.block_2.p") }}
-              </Paragraph1>
+              <p class="2xl:mb-[96px] md:mb-0 sm:mb-10 mb-8">
+                <Paragraph1>
+                  {{ $t("landing.block_2.p") }}
+                </Paragraph1>
+              </p>
             </div>
             <div
               class="2xl:basis-full xl:basis-4/12 md:basis-5/12 sm:basis-10/12 basis-full px-2"
@@ -229,9 +231,11 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
             <div
               class="2xl:basis-5/6 lg:basis-7/12 md:basis-6/12 basis-full sm:px-2 2xl:order-2 md:order-3 md:mb-0 sm:mb-6 mb-5"
             >
-              <Paragraph2>
-                {{ $t("landing.block_2.p_b") }}
-              </Paragraph2>
+              <p>
+                <Paragraph2>
+                  {{ $t("landing.block_2.p_b") }}
+                </Paragraph2>
+              </p>
             </div>
             <div
               class="2xl:basis-5/6 lg:basis-4/12 md:basis-6/12 basis-full sm:px-2 2xl:order-3 md:order-1"
@@ -300,9 +304,11 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
               </h2>
             </div>
             <div class="xl:basis-full lg:basis-8/12 md:basis-7/12 basis-full">
-              <Paragraph2 class="xl:mb-[60px]">
-                {{ $t("landing.block_4.p") }}
-              </Paragraph2>
+              <p class="xl:mb-[60px]">
+                <Paragraph2>
+                  {{ $t("landing.block_4.p") }}
+                </Paragraph2>
+              </p>
             </div>
           </div>
           <BigButton class="xl:block hidden">
@@ -376,9 +382,11 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
               </Headline3>
             </p>
             <div class="m-8 xl:mt-8 mt-0 border-t-[1px] border-green-600 pt-8">
-              <Paragraph2 class="xl:pb-2 pb-3">
-                {{ $t("landing.block_6.p") }}
-              </Paragraph2>
+              <p class="xl:pb-2 pb-3">
+                <Paragraph2>
+                  {{ $t("landing.block_6.p") }}
+                </Paragraph2>
+              </p>
               <img
                 src="/img/icons/lines.svg"
                 alt=""

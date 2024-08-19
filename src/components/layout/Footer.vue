@@ -12,7 +12,7 @@ import Small from "../buttons/Small.vue";
   <BlockSection id="footer">
     <Container>
       <div
-        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between mx-2 "
+        class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between mx-2"
       >
         <div
           class="2xl:basis-3/12 xl:basis-2/12 lg:basis-3/12 md:basis-6/12 basis-full pe-2 lg:block hidden"
@@ -25,13 +25,15 @@ import Small from "../buttons/Small.vue";
               :alt="$t('landing.footer.company')"
               class="2xl:w-[293px] h-auto"
             />
-            <Paragraph3 class="mt-auto">
-              {{ $t("landing.footer.company") }}
-            </Paragraph3>
+            <p class="mt-auto">
+              <Paragraph3>
+                {{ $t("landing.footer.company") }}
+              </Paragraph3>
+            </p>
           </div>
         </div>
         <div
-          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last px-2 "
+          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last px-2"
         >
           <img
             src="/img/logo.webp"
@@ -39,70 +41,100 @@ import Small from "../buttons/Small.vue";
             class="md:w-[181px] sm:w-[341px] w-[287px] h-auto md:mt-0 md:my-8 sm:my-[60px] my-8 lg:hidden"
           />
           <h3 class="xl:mb-12 mb-8">
-            <Headline3 class="text-green-600">{{
-              $t("landing.footer.working_ours")
-            }}</Headline3>
+            <Headline3 class="text-green-600">
+              {{ $t("landing.footer.working_ours") }}
+            </Headline3>
           </h3>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.monday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_1") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.monday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_1") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.tuesday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_1") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.tuesday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_1") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.wednesday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_1") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.wednesday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_1") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.thursday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_1") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.thursday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_1") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.friday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_1") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.friday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_1") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.saturday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_2") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.saturday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_2") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="flex justify-between mb-2">
-            <Paragraph2>
-              {{ $t("landing.footer.sunday") }}
-            </Paragraph2>
-            <Paragraph2>
-              {{ $t("landing.footer.time_2") }}
-            </Paragraph2>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.sunday") }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Paragraph2>
+                {{ $t("landing.footer.time_2") }}
+              </Paragraph2>
+            </p>
           </div>
           <div class="md:hidden md:mt-16 sm:mt-14 mt-12">
-            <Paragraph3>
-              {{ $t("landing.footer.company") }}
-            </Paragraph3>
+            <p>
+              <Paragraph3>
+                {{ $t("landing.footer.company") }}
+              </Paragraph3>
+            </p>
           </div>
         </div>
         <div class="md:basis-5/12 basis-full ps-2 md:order-3">
@@ -121,16 +153,8 @@ import Small from "../buttons/Small.vue";
             </div>
           </div>
           <div class="flex items-start mb-6">
-            <img
-              src="/img/icons/icon_phone.svg"
-              alt=""
-              class="mt-1 me-2"
-            />
-            <img
-              src="/img/icons/icon_whatsapp.svg"
-              alt=""
-              class="mt-1 me-4"
-            />
+            <img src="/img/icons/icon_phone.svg" alt="" class="mt-1 me-2" />
+            <img src="/img/icons/icon_whatsapp.svg" alt="" class="mt-1 me-4" />
             <a href="tel:+1 305-804-6752">
               <Paragraph2>
                 {{ $t("landing.footer.tel") }}
@@ -138,11 +162,7 @@ import Small from "../buttons/Small.vue";
             </a>
           </div>
           <div class="flex items-start mb-6">
-            <img
-              src="/img/icons/icon_email.svg"
-              alt=""
-              class="mt-1 me-4"
-            />
+            <img src="/img/icons/icon_email.svg" alt="" class="mt-1 me-4" />
             <a href="mailto:info@polyusconsulting.com">
               <Paragraph2>info@polyusconsulting.com</Paragraph2>
             </a>
@@ -156,17 +176,18 @@ import Small from "../buttons/Small.vue";
               </Paragraph2>
             </a>
           </div>
-          <Small class="">
+          <Small>
             {{ $t("landing.header.contact_us") }}
           </Small>
           <div class="lg:hidden md:block hidden md:mt-16 sm:mt-14 mt-12">
-            <Paragraph3>
-              {{ $t("landing.footer.company") }}
-            </Paragraph3>
+            <p>
+              <Paragraph3>
+                {{ $t("landing.footer.company") }}
+              </Paragraph3>
+            </p>
           </div>
         </div>
       </div>
     </Container>
   </BlockSection>
 </template>
-
