@@ -37,7 +37,7 @@ import Paragraph3 from "../../components/text/Paragraph3.vue";
         </div>
         <div class="basis-full px-6 md:text-end text-center 2xl:basis-3/12 xl:basis-2/12 md:basis-3/12">
           <Small
-            class="mb-4 me-4 sm:mb-0 sm:me-0 text-black bg-gray-600"
+            class="me-4m:me-0 text-black bg-gray-600"
             @click="acceptCookies"
           >
             <button>
