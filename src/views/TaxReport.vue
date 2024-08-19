@@ -59,7 +59,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
   </BlockSection>
 
   <!-- Block - 2 - IMPORTANT -->
-  <!-- <BlockSection id="important">
+  <BlockSection id="important">
     <Container>
       <div
         class="flex flex-row flex-wrap justify-between 2xl:mb-[180px] xl:mb-[140px] md:mb-[100px] sm:md-[80px] mb-[60px]"
@@ -111,20 +111,20 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           <GreenTableFull
             class="2xl:block hidden"
             :key="ImportantGreen[0].id"
-            :Headline="ImportantGreen[0].Headline"
-            :From="ImportantGreen[0].From"
-            :Month="ImportantGreen[0].Month"
-            :NumberTime="ImportantGreen[0].NumberTime"
+            :Headline="ImportantGreen[0].h4"
+            :From="ImportantGreen[0].p_1"
+            :Month="ImportantGreen[0].p_2"
+            :NumberTime="ImportantGreen[0].p_3"
           />
           <div class="md:block hidden">
             <div class="flex flex-row flex-wrap">
               <GreenTable
                 v-for="(important, index) in ImportantGreen"
                 :key="index"
-                :Headline="important.Headline"
-                :From="important.From"
-                :Month="important.Month"
-                :NumberTime="important.NumberTime"
+                :Headline="important.h4"
+                :From="important.p_1"
+                :Month="important.p_2"
+                :NumberTime="important.p_3"
                 :class="{
                   '2xl:hidden': index === 0,
                   'hidden lg:block': index === 1,
@@ -135,19 +135,19 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           <GreenTableFull
             class="lg:hidden md:block hidden"
             :key="ImportantGreen[2].id"
-            :Headline="ImportantGreen[2].Headline"
-            :From="ImportantGreen[2].From"
-            :Month="ImportantGreen[2].Month"
-            :NumberTime="ImportantGreen[2].NumberTime"
+            :Headline="ImportantGreen[2].h4"
+            :From="ImportantGreen[2].p_1"
+            :Month="ImportantGreen[2].p_2"
+            :NumberTime="ImportantGreen[2].p_3"
           />
           <GreenTableFull
             class="md:hidden"
             v-for="(important, index) in ImportantGreen"
             :key="index"
-            :Headline="important.Headline"
-            :From="important.From"
-            :Month="important.Month"
-            :NumberTime="important.NumberTime"
+            :Headline="important.h4"
+            :From="important.p_1"
+            :Month="important.p_2"
+            :NumberTime="important.p_3"
           />
         </div>
       </div>
@@ -166,21 +166,24 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           <RedTableFull
             class="2xl:block hidden"
             :key="ImportantRed[0].id"
-            :Headline="ImportantRed[0].Headline"
-            :Pinalty="ImportantRed[0].Pinalty"
-            :From="ImportantRed[0].From"
-            :Price="ImportantRed[0].Price"
+            :Headline="ImportantRed[0].h4"
+            :Pinalty="ImportantRed[0].p_1"
+            :From="ImportantRed[0].p_2"
+            :Price="ImportantRed[0].p_3"
+            :t_2="ImportantRed[0].t_2"
+            :t_3="ImportantRed[0].t_3"
           />
           <div class="md:block hidden">
             <div class="flex flex-row flex-wrap">
               <RedTable
                 v-for="(important, index) in ImportantRed"
                 :key="index"
-                :Headline="important.Headline"
-                :Pinalty="important.Pinalty"
-                :From="important.From"
-                :Price="important.Price"
-                :Tumbler="important.Tumbler"
+                :Headline="important.h4"
+                :Pinalty="important.p_1"
+                :From="important.p_2"
+                :Price="important.p_3"
+                :t_2="important.t_2"
+                :t_3="important.t_3"
                 :class="{
                   '2xl:hidden': index === 0,
                   'hidden lg:block': index === 1,
@@ -191,23 +194,21 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           <RedTableFull
             class="lg:hidden md:block hidden"
             :key="ImportantRed[2].id"
-            :Headline="ImportantRed[2].Headline"
-            :Pinalty="ImportantRed[2].Pinalty"
-            :From="ImportantRed[2].From"
-            :Price="ImportantRed[2].Price"
-            :Tumbler="ImportantRed[2].Tumbler"
-            :Tumbler2="ImportantRed[2].Tumbler2"
+            :Headline="ImportantRed[2].h4"
+            :Pinalty="ImportantRed[2].p_1"
+            :From="ImportantRed[2].p_2"
+            :Price="ImportantRed[2].p_3"
           />
           <RedTableFull
             class="md:hidden"
             v-for="(important, index) in ImportantRed"
             :key="index"
-            :Headline="important.Headline"
-            :Pinalty="important.Pinalty"
-            :From="important.From"
-            :Price="important.Price"
-            :Tumbler="important.Tumbler"
-            :Tumbler2="important.Tumbler2"
+            :Headline="important.h4"
+            :Pinalty="important.p_1"
+            :From="important.p_2"
+            :Price="important.p_3"
+            :t_2="important.t_2"
+            :t_3="important.t_3"
           />
         </div>
         <div
@@ -241,7 +242,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
         </div>
       </div>
     </Container>
-  </BlockSection> -->
+  </BlockSection>
 
   <!-- Block - 3 - POLYUS CONSULTING ADVANTAGES -->
   <BlockSection id="advantages">
@@ -420,52 +421,12 @@ export default {
     ListAdvantages() {
       return this.$tm("landing.block_3.list");
     },
-  },
-  data() {
-    return {
-      ImportantGreen: [
-        {
-          Headline: this.$t("landing.block_2.green_table_1.h4"),
-          From: this.$t("landing.block_2.green_table_1.p_1"),
-          Month: this.$t("landing.block_2.green_table_1.p_2"),
-          NumberTime: this.$t("landing.block_2.green_table_1.p_3"),
-        },
-        {
-          Headline: this.$t("landing.block_2.green_table_2.h4"),
-          From: this.$t("landing.block_2.green_table_2.p_1"),
-          Month: this.$t("landing.block_2.green_table_2.p_2"),
-          NumberTime: this.$t("landing.block_2.green_table_2.p_3"),
-        },
-        {
-          Headline: this.$t("landing.block_2.green_table_3.h4"),
-          From: this.$t("landing.block_2.green_table_3.p_1"),
-          Month: this.$t("landing.block_2.green_table_3.p_2"),
-          NumberTime: this.$t("landing.block_2.green_table_3.p_3"),
-        },
-      ],
-      ImportantRed: [
-        {
-          Headline: this.$t("landing.block_2.red_table_1.h4"),
-          Pinalty: this.$t("landing.block_2.red_table_1.p_1"),
-          From: this.$t("landing.block_2.red_table_1.p_2"),
-          Price: this.$t("landing.block_2.red_table_1.p_3"),
-          Tumbler: true,
-        },
-        {
-          Headline: this.$t("landing.block_2.red_table_2.h4"),
-          Pinalty: this.$t("landing.block_2.red_table_2.p_1"),
-          From: this.$t("landing.block_2.red_table_2.p_2"),
-          Price: this.$t("landing.block_2.red_table_2.p_3"),
-        },
-        {
-          Headline: this.$t("landing.block_2.red_table_3.h4"),
-          Pinalty: this.$t("landing.block_2.red_table_3.p_1"),
-          From: this.$t("landing.block_2.red_table_3.p_2"),
-          Price: this.$t("landing.block_2.red_table_3.p_3"),
-          Tumbler2: true,
-        },
-      ],
-    };
+    ImportantGreen() {
+      return this.$tm("landing.block_2.green_table");
+    },
+    ImportantRed() {
+      return this.$tm("landing.block_2.red_table");
+    },
   },
 };
 </script>

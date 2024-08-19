@@ -23,23 +23,77 @@ import ImgRedLines from "../../landing/important/ImgRedLines.vue";
           <ImgDoubleRedArrow class="h-[23px] w-[18px] rotate-[-90deg]" />
         </div>
       </div>
-      <div class="flex justify-between items-center p-6">
-        <Paragraph2>
-          {{ Pinalty }}
-        </Paragraph2>
-        <p v-if="Tumbler === true">
-          <Headline3>
-            {{ From }}
-          </Headline3>
-        </p>
-      </div>
-      <div class="flex flex-row justify-between items-center pe-8 sm:mb-0 mb-6">
-        <ImgRedLines class="md:w-[351px] sm:w-[341px] w-[137px]" />
-       <p v-if="Tumbler === true">
-          <Headline3>
-            {{ From }}
-          </Headline3>
-        </p>
+      <div class="flex flex-row lg:flex-wrap justify-between items-end p-6 ps-0">
+        <div class="basis-full mb-6 lg:block hidden">
+          <p class="lg:ps-6">
+            <Paragraph2>
+              {{ Pinalty }}
+            </Paragraph2>
+          </p>
+        </div>
+        <div class="basis-6/12">
+          <ImgRedLines></ImgRedLines>
+        </div>
+        <div v-if="From" class="basis-6/12">
+          <div class="text-end">
+            <p class="my-4">
+              <Paragraph2>
+                {{ Pinalty }}
+              </Paragraph2>
+            </p>
+            <p>
+              <Headline3>
+                {{ From }}
+              </Headline3>
+            </p>
+            <p>
+              <Headline2>
+                {{ Price }}
+              </Headline2>
+            </p>
+          </div>
+        </div>
+        <div v-if="t_2" class="basis-6/12 lg:hidden">
+          <div class="flex flex-row flex-wrap items-end text-end justify-end">
+            <p class="my-4">
+              <Paragraph2>
+                {{ Pinalty }}
+              </Paragraph2>
+            </p>
+            <div class="flex">
+              <div class="basis-8/12">
+                <p>
+                  <Headline2>
+                    {{ t_2 }}
+                  </Headline2>
+                </p>
+              </div>
+              <div class="basis-4/12">
+                <Headline3 class="w-4/5">
+                  {{ t_3 }}
+                </Headline3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="t_2" class="bisis-6/12 lg:block hidden">
+          <div class="flex flex-row flex-wrap items-end text-end justify-end">
+            <div class="flex">
+              <div class="basis-8/12">
+                <p>
+                  <Headline2>
+                    {{ t_2 }}
+                  </Headline2>
+                </p>
+              </div>
+              <div class="basis-4/12">
+                <Headline3 class="w-4/5">
+                  {{ t_3 }}
+                </Headline3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -52,8 +106,8 @@ export default {
     Pinalty: String,
     From: String,
     Price: String,
-    Tumbler: Boolean,
-    Tumbler2: Boolean,
+    t_2: String,
+    t_3: String,
   },
 };
 </script>

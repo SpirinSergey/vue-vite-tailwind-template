@@ -46,43 +46,49 @@ export default {
       h2: "IMPORTANT!",
       p: "There are requirements for all US companies to file annual tax returns with the federal IRS and the state, whether the business was operating or not.",
       h3_1: "US corporate reporting calendar",
-      green_table: {
-        h4: "Partnerships LLC (Two or more participants)",
-        p_1: "Form 1065",
-        p_2: "March",
-        p_3: "15",
-      },
-      green_table_2: {
-        h4: "С Corporation",
-        p_1: "Form 1120",
-        p_2: "April",
-        p_3: "15",
-      },
-      green_table_3: {
-        h4: "Single-Member LLC (LLC - one member)",
-        p_1: "Form 1040",
-        p_2: "April",
-        p_3: "15",
-      },
+      green_table: [
+        {
+          h4: "Partnerships LLC (Two or more participants)",
+          p_1: "Form 1065",
+          p_2: "March",
+          p_3: "15",
+        },
+        {
+          h4: "С Corporation",
+          p_1: "Form 1120",
+          p_2: "April",
+          p_3: "15",
+        },
+        {
+          h4: "Single-Member LLC (LLC - one member)",
+          p_1: "Form 1040",
+          p_2: "April",
+          p_3: "15",
+        },
+      ],
+
       h3_2: "Penalties",
-      red_table_1: {
-        h4: "Overdue reporting to the IRS",
-        p_1: "Penalty:",
-        p_2: "$195/",
-        p_3: "earch month",
-      },
-      red_table_2: {
-        h4: "Delinquent reporting for Corporations with nonresident members",
-        p_1: "Penalty:",
-        p_2: "from",
-        p_3: "$25,000",
-      },
-      red_table_3: {
-        h4: "Improper preparation of IRS Form 5472 information forms",
-        p_1: "Penalty:",
-        p_2: "from",
-        p_3: "$25,000",
-      },
+      red_table: [
+        {
+          h4: "Overdue reporting to the IRS",
+          p_1: "Penalty:",
+          t_2: "$195/",
+          t_3: "earch month",
+        },
+        {
+          h4: "Delinquent reporting for Corporations with nonresident members",
+          p_1: "Penalty:",
+          p_2: "from",
+          p_3: "$25,000",
+        },
+        {
+          h4: "Improper preparation of IRS Form 5472 information forms",
+          p_1: "Penalty:",
+          p_2: "from",
+          p_3: "$25,000",
+        },
+      ],
+
       p_b: "If you have not filed/verified your annual returns in time, the IRS grants a 6-month grace period with no penalties or fees. To receive the extension, you must file the correct information with the IRS.",
     },
     block_3: {

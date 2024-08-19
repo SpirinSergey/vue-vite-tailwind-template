@@ -24,34 +24,36 @@ import ImgRedVerticalLines from "../../landing/important/ImgRedVerticalLines.vue
               {{ Pinalty }}
             </Paragraph2>
           </p>
-          <p v-if="Tumbler !== true">
+          <p v-if="From">
             <Headline3>
               {{ From }}
             </Headline3>
           </p>
         </div>
       </div>
-      <div v-if="Tumbler !== true" class="text-end pe-6 pb-6">
-        <div class="">
-          <p>
-            <Headline2>
-              {{ Price }}
-            </Headline2>
-          </p>
-        </div>
+      <div v-if="From" class="text-end pe-6 pb-6">
+        <p>
+          <Headline2>
+            {{ Price }}
+          </Headline2>
+        </p>
       </div>
-      <div v-if="Tumbler === true" class="flex flex-row justify-end items-end text-end pe-6 pb-6 pt-5">
-          <div>
-            <Headline2 class="lg:pb-2 pb-1.5">
-              {{ From }}
-            </Headline2>
+      <div v-if="t_2" class="pe-6 pb-6 text-end xl:pt-[18px] pt-[13px]">
+        <div class="flex flex-row items-end text-end justify-end">
+          <div class="basis-8/12">
+            <p>
+              <Headline2>
+                {{ t_2 }}
+              </Headline2>
+            </p>
           </div>
-          <div class=" w-[28%]">
-            <Headline3 >
-              {{ Price }}
+          <div class="basis-3/12">
+            <Headline3 class="w-4/5">
+              {{ t_3 }}
             </Headline3>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -63,7 +65,8 @@ export default {
     Pinalty: String,
     From: String,
     Price: String,
-    Tumbler: Boolean,
+    t_2: String,
+    t_3: String,
   },
 };
 </script>
