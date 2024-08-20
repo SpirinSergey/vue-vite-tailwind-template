@@ -9,7 +9,7 @@ import Small from "../buttons/Small.vue";
 </script>
 
 <template>
-  <BlockSection id="footer">
+  <BlockSection id="about_us">
     <Container>
       <div
         class="flex flex-row flex-wrap border-t-[1px] border-green-600 pt-16 md:justify-between mx-2"
