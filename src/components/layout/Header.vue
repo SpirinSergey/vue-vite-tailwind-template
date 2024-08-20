@@ -1,8 +1,8 @@
 <script setup>
 import Container from "../shared/Container.vue";
 import SelectLanguages from "../shared/SelectLanguages.vue";
-import Paragraph2 from "../text/Paragraph2.vue";
 import Link from "../text/Link.vue";
+import Burger from "../shared/Burger.vue";
 </script>
 
 <template>
@@ -61,7 +61,10 @@ import Link from "../text/Link.vue";
           </ul>
         </div>
         <div class="xl:basis-2/12 basis-1/12 ps-2 text-end">
-          <SelectLanguages />
+          <div class="flex justify-end">
+            <SelectLanguages />
+            <Burger class="lg:hidden ms-4" />
+          </div>
         </div>
       </div>
     </nav>

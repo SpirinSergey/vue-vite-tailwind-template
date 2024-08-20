@@ -10,9 +10,11 @@ import Paragraph2 from "../text/Paragraph2.vue";
         {{ Headline }}
       </Headline3>
     </h3>
-    <Paragraph2 class="pb-4">
-      {{ Text }}
-    </Paragraph2>
+    <p class="pb-4">
+      <Paragraph2>
+        {{ Text }}
+      </Paragraph2>
+    </p>
   </div>
 </template>
 

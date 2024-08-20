@@ -18,7 +18,7 @@ import Paragraph2 from "../../text/Paragraph2.vue";
             </Headline4>
           </h4>
           <img
-            src="/public/img/icons/double_arrow.svg"
+            src="/img/icons/double_arrow.svg"
             class="h-[23px] w-[18px]"
             alt=""
           />

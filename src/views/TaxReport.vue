@@ -8,7 +8,6 @@ import Headline3 from "@text/Headline3.vue";
 import Headline4 from "@text/Headline4.vue";
 import Paragraph1 from "@text/Paragraph1.vue";
 import Paragraph2 from "@text/Paragraph2.vue";
-import Paragraph3 from "@text/Paragraph3.vue";
 
 import BigButton from "../components/buttons/Big.vue";
 
@@ -82,7 +81,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
                   </Headline2>
                 </h2>
                 <img
-                  src="/public/img/icons/double_arrow.svg"
+                  src="/img/icons/double_arrow.svg"
                   class="sm:h-9 sm:w-7 h-[21px] w-[16px]"
                   alt=""
                 />

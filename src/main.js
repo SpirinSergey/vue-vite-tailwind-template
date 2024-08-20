@@ -30,12 +30,12 @@ const router = createRouter({
 });
 
 const messages = {
-  EN: localesEn,
-  RU: localesRu,
+  en: localesEn,
+  ru: localesRu,
 };
 
 const i18n = createI18n({
-  locale: "EN",
+  locale: "en",
   messages: messages,
 });
 

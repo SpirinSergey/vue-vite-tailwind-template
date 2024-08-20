@@ -1,7 +1,6 @@
 <script setup>
 import Headline2 from "../../text/Headline2.vue";
 import Headline3 from "../../text/Headline3.vue";
-import Headline4 from "../../text/Headline4.vue";
 import Paragraph2 from "../../text/Paragraph2.vue";
 import ImgDoubleRedArrow from "../../landing/important/ImgDoubleRedArrow.vue";
 import ImgRedLines from "../../landing/important/ImgRedLines.vue";
@@ -19,7 +18,6 @@ import ImgRedLines from "../../landing/important/ImgRedLines.vue";
               {{ Headline }}
             </Paragraph2>
           </h4>
-
           <ImgDoubleRedArrow class="h-[23px] w-[18px] rotate-[-90deg] md:block hidden" />
         </div>
       </div>
