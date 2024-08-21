@@ -5,7 +5,7 @@ import Paragraph3 from "../text/Paragraph3.vue";
 </script>
 
 <template>
-  <div class="basis-4/12 px-2 lg:block hidden">
+  <div class="basis-4/12 px-2 ">
     <div
       class="p-8 border-[1px] rounded-[30px]"
     >

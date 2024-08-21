@@ -11,7 +11,7 @@
       @click="changeLocale(lang)"
     >
       <div class="flex">
-        <img src="/public/img/icons/arrow.svg" alt="" class="me-1" />
+        <img src="/img/icons/arrow.svg" alt="" class="me-1" />
 
         <span class="font-Unbounded-Medium text-p1 md:text-p1-md xl:text-p1-xl">
           {{ lang }}

@@ -12,6 +12,7 @@ import Paragraph2 from "@text/Paragraph2.vue";
 import BigButton from "../components/buttons/Big.vue";
 
 import Review from "../components/landing/Review.vue";
+import ReviewCarousel from "../components/landing/ReviewCarousel.vue";
 import ListAdvantage from "../components/landing/ListAdvantage.vue";
 import FormBottom from "../components/landing/FormBottom.vue";
 
@@ -20,9 +21,16 @@ import GreenTableFull from "../components/landing/important/GreenTableFull.vue";
 import GreenTable from "../components/landing/important/GreenTable.vue";
 import RedTable from "../components/landing/important/RedTable.vue";
 import RedTableFull from "../components/landing/important/RedTableFull.vue";
+
+// Form
+import { ref } from "vue";
+import ModalForm from "../components/forms/ModalForm.vue";
+const showModal = ref(false);
 </script>
 
 <template>
+
+
   <!-- Block - 1 - TOP -->
   <BlockSection>
     <Container class="">
@@ -42,7 +50,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
               {{ $t("landing.block_1.p") }}
             </Headline4>
           </p>
-          <BigButton class="mb-8 xl:mb-0">
+          <BigButton class="mb-8 xl:mb-0" @click="showModal = true">
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
@@ -278,6 +286,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
             :Text="list.p"
           />
           <BigButton
+            @click="showModal = true"
             class="xl:mt-8 sm:mt-4 mt-2 lg:mt-0 2xl:mb-0 sm:mb-14 mb-12"
           >
             {{ $t("landing.buttons.apply_now") }}
@@ -310,7 +319,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
               </p>
             </div>
           </div>
-          <BigButton class="xl:block hidden">
+          <BigButton @click="showModal = true" class="xl:block hidden">
             {{ $t("landing.buttons.apply_now") }}
           </BigButton>
         </div>
@@ -333,6 +342,7 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           </h2>
         </div>
         <Review
+          class="lg:block hidden"
           v-for="(review, index) in Reviews"
           :key="index"
           :ImageReview="review.img"
@@ -340,6 +350,9 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
           :TextReview="review.text"
           :TimeReview="review.time"
         />
+        <div class="basis-full overflow-hidden">
+          <ReviewCarousel class="lg:hidden" />
+        </div>
       </div>
     </Container>
   </BlockSection>
@@ -413,10 +426,20 @@ import RedTableFull from "../components/landing/important/RedTableFull.vue";
             </Headline2>
           </h2>
         </div>
-        <FormBottom />
       </div>
+
+      <FormBottom />
     </Container>
   </BlockSection>
+
+  <!-- Modal Form -->
+  <ModalForm v-if="showModal" @close="showModal = false">
+    <h3>
+      <Paragraph1 class="text-green-600">
+        {{ $t("landing.buttons.apply_now") }}
+      </Paragraph1>
+    </h3>
+  </ModalForm>
 </template>
 
 <script>

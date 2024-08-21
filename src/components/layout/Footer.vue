@@ -33,7 +33,7 @@ import Small from "../buttons/Small.vue";
           </div>
         </div>
         <div
-          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last px-2"
+          class="xl:basis-3/12 lg:basis-3/12 md:basis-5/12 sm:basis-6/12 basis-9/12 md:order-2 order-last "
         >
           <img
             src="/img/logo.webp"
@@ -137,7 +137,7 @@ import Small from "../buttons/Small.vue";
             </p>
           </div>
         </div>
-        <div class="md:basis-5/12 basis-full ps-2 md:order-3">
+        <div class="md:basis-5/12 basis-full md:order-3">
           <div class="border-b-[1px] border-green-600 pb-4 mb-8">
             <div class="flex">
               <router-link to="/legal/terms-of-us" exact>

@@ -21,3 +21,11 @@
     src: url(assets/fonts/Unbounded-Medium.ttf) format("truetype");
   }
 }
+
+.int-tel-container {
+  width: 100% !important;
+
+}
+.iti--container {
+  z-index: 99999999999;
+}
