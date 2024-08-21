@@ -111,49 +111,57 @@ onMounted(() => {
       <div
         class="xl:basis-4/12 lg:basis-5/12 md:basis-6/12 sm:basis-10/12 basis-full px-2"
       >
-        <Paragraph2>
-          <input
-            v-model="name"
-            name="name"
-            type="text"
-            maxlength="29"
-            required
-            class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-            :placeholder="$t('landing.forms.name')"
-          />
-        </Paragraph2>
-        <Paragraph2>
-          <input
-            id="phone-input-open"
-            type="tel"
-            maxlength="30"
-            required
-            class="bg-gray-200 w-full h-8 rounded-[10px] p-9 lg:mb-0 mb-6"
-          />
-        </Paragraph2>
+        <p class="mb-6">
+          <Paragraph2>
+            <input
+              v-model="name"
+              name="name"
+              type="text"
+              maxlength="29"
+              required
+              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
+              :placeholder="$t('landing.forms.name')"
+            />
+          </Paragraph2>
+        </p>
+        <p class="lg:mb-0 mb-6">
+          <Paragraph2>
+            <input
+              id="phone-input-open"
+              type="tel"
+              maxlength="30"
+              required
+              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
+            />
+          </Paragraph2>
+        </p>
       </div>
       <div
         class="xl:basis-4/12 lg:basis-5/12 md:basis-6/12 sm:basis-10/12 basis-full px-2 lg:mb-0 mb-6"
       >
-        <Paragraph2>
-          <input
-            v-model="email"
-            name="email"
-            type="email"
-            class="bg-gray-200 w-full h-8 rounded-[10px] p-9 mb-6"
-            :placeholder="$t('landing.forms.email')"
-            required
-          />
-        </Paragraph2>
+        <p class="mb-6">
+          <Paragraph2>
+            <input
+              v-model="email"
+              name="email"
+              type="email"
+              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
+              :placeholder="$t('landing.forms.email')"
+              required
+            />
+          </Paragraph2>
+        </p>
 
-        <Paragraph2>
-          <input
-            v-model="message"
-            type="text"
-            class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
-            :placeholder="$t('landing.forms.message')"
-          />
-        </Paragraph2>
+        <p>
+          <Paragraph2>
+            <input
+              v-model="message"
+              type="text"
+              class="bg-gray-200 w-full h-8 rounded-[10px] p-9"
+              :placeholder="$t('landing.forms.message')"
+            />
+          </Paragraph2>
+        </p>
       </div>
       <div
         class="lg:basis-5/12 md:basis-6/12 sm:basis-10/12 basis-full px-2 xl:hidden"
@@ -175,9 +183,7 @@ onMounted(() => {
               <span v-if="!tumbler">
                 {{ $t("landing.buttons.submit") }}
               </span>
-              <span v-if="tumbler">
-                OK
-              </span>
+              <span v-if="tumbler"> OK </span>
             </span>
             <span v-if="isSubmitting">
               <Spinner />

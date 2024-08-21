@@ -1,3 +1,10 @@
+<script setup>
+import Headline3 from "../text/Headline3.vue";
+import Paragraph2 from "../text/Paragraph2.vue";
+import Paragraph3 from "../text/Paragraph3.vue";
+</script>
+
+
 <template>
   <carousel :items-to-show="1">
     <slide v-for="(review, index) in reviews" :key="index">
