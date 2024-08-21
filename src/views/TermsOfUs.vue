@@ -10,7 +10,7 @@ import Paragraph2 from "@text/Paragraph2.vue";
   <!-- Terms Of Us -->
   <BlockSection>
     <Container
-      class="2xl:mt-[200px] xl:mt-[160px] md:mt-[120px] sm:mt-100 mt-80"
+      class="2xl:mt-[200px] xl:mt-[160px] md:mt-[120px] sm:mt-[100px] mt-[80px]"
     >
       <div class="flex flex-row flex-wrap">
         <div
