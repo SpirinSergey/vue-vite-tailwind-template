@@ -9,7 +9,7 @@ import NavbarMob from "../shared/NavbarMob.vue";
 <template>
   <Container class="relative lg:block flex lg:pt-0 pt-[118px]">
     <nav
-      class="absolute top-0 py-8 border-b-[1px] border-green-600 mx-2 lg:relative lg:w-auto w-full md:w-[752px] sm:w-[624px]  h-auto z-50 bg-white"
+      class="absolute top-0 py-8 border-b-[1px] border-green-600 mx-2  lg:relative lg:w-auto w-[calc(100%-16px)] md:w-[752px] sm:w-[624px]  h-auto z-50 bg-white"
     >
       <div class="flex flex-row items-center justify-between">
         <div class="2xl:basis-3/12 lg:basis-2/12 sm:basis-3/12 basis-4/12 pe-2">
@@ -75,8 +75,8 @@ import NavbarMob from "../shared/NavbarMob.vue";
     <!-- Mobile Menu -->
     <NavbarMob
     @click="OpenMobileMenu"
-      class="lg:hidden  lg:relative absolute duration-500 lg:w-auto md:w-[752px]  sm:w-[624px] w-full  top-[-400px] z-10 left-2"
-      :class="{ 'top-[118px]': menu }"
+      class="lg:hidden  lg:relative absolute duration-500 lg:w-auto md:w-[752px]  sm:w-[624px] w-[calc(100%-16px)]  top-[-400px] z-10 left-2 "
+      :class="{ 'sm:top-[118px] top-[100px]': menu }"
     />
   </Container>
 </template>
