@@ -29,3 +29,44 @@
 .iti--container {
   z-index: 99999999999;
 }
+
+
+/* Bitrix24 */
+.b24-widget-button-position-bottom-right {
+  right: 4px !important;
+  bottom: 78px !important;
+}
+
+.b24-widget-button-inner-block,
+.bx-livechat-head,
+.bx-livechat-head-wrap,
+.b24-widget-button-popup,
+.b24-widget-button-pulse,
+.b24-widget-button-inner-block,
+.b24-widget-button-inner-mask {
+  background-color: #066038 !important;
+}
+
+.bx-livechat-body {
+  background: none !important;
+}
+
+.b24-widget-button-popup,
+.b24-widget-button-popup-triangle {
+  border-color: #066038 !important;
+}
+
+.b24-widget-button-popup-description,
+.b24-widget-button-popup-name {
+  color: white !important;
+}
+
+.b24-widget-button-pulse {
+  border: 1px solid #066038 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .b24-widget-button-popup {
+    display: none !important;
+  }
+}
