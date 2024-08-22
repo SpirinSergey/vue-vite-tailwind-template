@@ -43,7 +43,7 @@ const submitForm = async (event) => {
     FIELDS[NAME]=${name.value}&
     FIELDS[EMAIL][0][VALUE]=${email.value}&
     FIELDS[PHONE][0][VALUE]=${phone.value}&
-    FIELDS[UF_CRM_1707737542]=Test&
+    FIELDS[UF_CRM_1707737542]=Polyus Consulting&
     FIELDS[UF_CRM_1707737108]=${message.value}&
     g-recaptcha-response=${recaptchaToken.value}`;
 
@@ -204,7 +204,8 @@ onMounted(() => {
         class="absolute top-0 right-0 transform -scale-x-100"
         alt=""
       />
-      <img v-if="!tumbler"
+      <img
+        v-if="!tumbler"
         src="/img/icons/double_arrow.svg"
         class="absolute bottom-[46px] left-[25px] transform -rotate-90 h-[24px] w-auto"
         alt=""

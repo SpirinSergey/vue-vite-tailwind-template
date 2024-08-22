@@ -49,7 +49,7 @@ const submitForm = async (event) => {
     FIELDS[NAME]=${name.value}&
     FIELDS[EMAIL][0][VALUE]=${email.value}&
     FIELDS[PHONE][0][VALUE]=${phone.value}&
-    FIELDS[UF_CRM_1707737542]=Test&
+    FIELDS[UF_CRM_1707737542]=Polyus Consulting&
     FIELDS[UF_CRM_1707737108]=${message.value}&
     g-recaptcha-response=${recaptchaToken.value}`;
 
