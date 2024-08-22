@@ -9,7 +9,7 @@ import App from "./App.vue";
 
 import VueCookies from "vue-cookies";
 
-import { createWebHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 import TaxReport from "./views/TaxReport.vue";
 import PrivacyPolicy from "./views/PrivacyPolicy.vue";

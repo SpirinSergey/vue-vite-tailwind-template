@@ -15,6 +15,6 @@ import Bitrix24 from "./components/shared/Bitrix24.vue";
   <footer>
     <Footer />
   </footer>
-<Cookies />
-<Bitrix24 />
+  <Cookies />
+  <Bitrix24 />
 </template>
